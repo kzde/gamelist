@@ -1,1 +1,1 @@
-# gamelist
+# gameslist
