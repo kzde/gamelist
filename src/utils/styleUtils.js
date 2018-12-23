@@ -3,7 +3,8 @@ import { css } from 'styled-components';
 export const colorPalettes = {
   black: '#333333',
   white: '#FFFFFF',
-  red: '#FE6050'
+  red: '#FE6050',
+  lightGrey: '#E5E5E5'
 }
 
 export const themeColor = {

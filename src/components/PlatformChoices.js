@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { themeColor, basicMargin } from '../utils/styleUtils';
+import { themeColor, basicMargin, colorPalettes } from '../utils/styleUtils';
 
 const Wrapper = styled.div`
   padding: ${basicMargin};
+  background: ${colorPalettes.lightGrey}
 `
 const Label = styled.span`
   line-height: 37px;

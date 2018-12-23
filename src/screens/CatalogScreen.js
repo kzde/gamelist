@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Header from '../components/Header';
 import PlatformChoices from '../components/PlatformChoices';
 import choices from '../platforms.json'
+import CatalogContainer from '../components/CatalogContainer';
 
 class CatalogScreen extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class CatalogScreen extends Component {
           handleClick={this.platFormSelected} 
           selectedPlatForm={this.state.selectedPlatForm}
         />
+        <CatalogContainer />
       </Fragment>
     )
   }
