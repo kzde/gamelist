@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components';
 import { margins, cardSize, colorPalettes, textSizes } from '../utils/styleUtils';
 
@@ -32,7 +33,9 @@ font-weight: 300;
 const Card = ({ title, cover, platForm }) => {
   return (
     <Wrapper>
+      <NavLink to={title}>
       <Img src={cover} />
+        </NavLink>
       <Content>
         <Title>{title}</Title>
         <SubTitle>{platForm}</SubTitle>

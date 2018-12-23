@@ -21,7 +21,7 @@ exports[`Header should renders correctly 1`] = `
     </svg>
   </div>
   <div
-    className="Header__Title-sc-14t63oa-1 gVOQsf"
+    className="Header__Title-sc-14t63oa-1 kzoGly"
   >
     Header text
   </div>

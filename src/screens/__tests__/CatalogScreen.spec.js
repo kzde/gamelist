@@ -3,6 +3,8 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import CatalogScreen from '../CatalogScreen';
 
+jest.mock('../../components/CatalogContainer', () => 'CatalogContainer');
+
 describe('CatalogScreen', () => {
   it('should renders correctly', () => {
     const tree = renderer
