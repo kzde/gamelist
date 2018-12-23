@@ -1,32 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
-import { basicMargin, colorPalettes } from '../utils/styleUtils';
+import { margins, cardSize, colorPalettes, textSizes } from '../utils/styleUtils';
 
 const Wrapper = styled.div`
-  width: 328px;
-  height: 492px;
-  display:flex;
-  flex-direction: column;
+  width: ${cardSize.width};
+  height: ${cardSize.height};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   overflow: hidden;
 `;
 
 const Img = styled.img`
-  width: 328px;
+  width: ${cardSize.width};
   height: 411px;
+  display: block;
 `;
 const Content = styled.div`
   height: 81px;
   background: ${colorPalettes.white};
-  padding: ${basicMargin};
+  padding: ${margins.medium};
 `
 const Title = styled.div`
-  font-size: 18px;
+  font-size: ${textSizes.normalText};
 `
 const SubTitle = styled.div`
-margin-top: 8px;
-font-size: 14px;
+margin-top: ${margins.small};
+font-size: ${textSizes.smallText};
 font-weight: 300;
 `;
 

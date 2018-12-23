@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { themeColor, basicMargin, colorPalettes } from '../utils/styleUtils';
+import { themeColor, margins, colorPalettes, textSizes } from '../utils/styleUtils';
 
 const Wrapper = styled.div`
-  padding: ${basicMargin};
+  padding: ${margins.medium};
   background: ${colorPalettes.lightGrey}
 `
 const Label = styled.span`
   line-height: 37px;
   text-align: center;
-  font-size: 18px;
+  font-size: ${textSizes.normalText};
   &+span {
     margin-left: 12px;
   }

@@ -2,15 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import gamesList from '../games.json';
 import Card from './Card';
-import { colorPalettes, basicMargin } from '../utils/styleUtils';
+import { colorPalettes, margins, cardSize, media } from '../utils/styleUtils';
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 328px);
-  grid-gap: 32px;
+  grid-template-columns: repeat(4, ${cardSize.width});
+  grid-gap: ${margins.large};
   background: ${colorPalettes.lightGrey};
-  padding: ${basicMargin};
+  padding: ${margins.medium};
   padding-top: 0;
+  ${media.desktop`grid-template-columns: repeat(3, ${cardSize.width});`}
+  ${media.tablet`grid-template-columns: repeat(2, ${cardSize.width});`}
+  ${media.phone`grid-template-columns: repeat(1, ${cardSize.width});`}
 `;
 
 const CatalogContainer = () => {

@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { colorPalettes, headerHeight } from '../utils/styleUtils';
+import { colorPalettes, headerHeight, textSizes, margins } from '../utils/styleUtils';
 
 const Wrapper = styled.div`
-display: flex;
+display: grid;
+grid-template-columns: repeat(2);
 align-items: center;
 height: ${headerHeight};
 background: ${colorPalettes.black};
@@ -12,15 +13,17 @@ background: ${colorPalettes.black};
 
 const Title = styled.div`
   display: inherit;
+  grid-column: 2;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: ${textSizes.titleText};
   color: ${colorPalettes.white};
 `;
 
 const Logo = styled.div`
+  grid-column: 1;
   display: inherit;
-  padding: 0 16px;
+  padding: 0 ${margins.medium};
 `
 
 const Header = ({ text }) => {

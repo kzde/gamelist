@@ -12,10 +12,28 @@ export const themeColor = {
   selected: colorPalettes.red
 }
 
+export const textSizes = {
+  smallText: '14px',
+  normalText: '18px',
+  titleText: '24px'
+}
+
+export const margins = {
+  small: '8px',
+  medium: '16px',
+  large: '32px'
+}
+
 export const headerHeight = '64px';
-export const basicMargin = '16px';
+export const basicMargin = 16;
+export const cardSize = {
+  width: '328px',
+  height: '492px',
+  widthForPhone: '359px'
+}
 
 const sizes = {
+  giant: 1170,
   desktop: 992,
   tablet: 768,
   phone: 576
