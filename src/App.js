@@ -1,3 +1,24 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { createGlobalStyle } from 'styled-components';
+import CatalogScreen from './screens/CatalogScreen';
 
-export default () => <div>Games catalog</div>
+const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+  html,body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family:  'Roboto', sans-serif; 
+  }
+`
+
+const App = () => {
+  return (
+    <Fragment>
+      <CatalogScreen />
+      <GlobalStyle />
+    </Fragment>
+  )
+}
+
+
+export default App;
