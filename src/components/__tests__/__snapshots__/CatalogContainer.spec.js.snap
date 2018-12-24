@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CatalogContainer should renders correctly 1`] = `
+<div
+  className="CatalogContainer__Wrapper-sc-1ewu4fh-0 jTwKqB"
+>
+  <Card
+    cover="cover"
+    subTitle="platform"
+    title="game"
+  />
+  <Card
+    cover="another cover"
+    subTitle="another platform"
+    title="another game"
+  />
+</div>
+`;

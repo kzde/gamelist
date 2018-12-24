@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import gamesList from '../games.json';
 import Card from './Card';
 import { colorPalettes, margins, cardSize, media } from '../utils/styleUtils';
 
@@ -16,10 +15,7 @@ const Wrapper = styled.div`
   ${media.phone`grid-template-columns: repeat(1, ${cardSize.width});`}
 `;
 
-const CatalogContainer = () => {
-  const { games } = gamesList;
-
-
+const CatalogContainer = ({games}) => {
   return (
     <Wrapper>
       {
@@ -27,7 +23,7 @@ const CatalogContainer = () => {
           return <Card
             key={`${game.name}${index}`}
             title={game.name}
-            platForm={game.platform}
+            subTitle={game.platform}
             cover={game.cover}
           />
         })

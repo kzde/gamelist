@@ -5,7 +5,8 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     devServer: {
-        contentBase: '/dist'
+        contentBase: '/dist',
+        historyApiFallback: true
     },
     devtool: 'inline-source-map',
     output: {

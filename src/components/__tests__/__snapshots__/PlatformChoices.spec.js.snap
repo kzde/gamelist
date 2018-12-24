@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlatformChoices should renders correctly 1`] = `
+<div
+  className="PlatformChoices__Wrapper-sc-1bsu13e-0 jyEzSo"
+>
+  <span
+    className="PlatformChoices__Label-sc-1bsu13e-1 iJtTUN"
+    onClick={[Function]}
+    selected={true}
+  >
+    platform
+  </span>
+  <span
+    className="PlatformChoices__Label-sc-1bsu13e-1 mVAbY"
+    onClick={[Function]}
+    selected={false}
+  >
+    another platform
+  </span>
+</div>
+`;

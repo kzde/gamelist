@@ -1,17 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { header as Header } from '../Header';
+import { card as Card } from '../Card';
 
-describe('Header', () => {
+describe('Card', () => {
   it('should renders correctly', () => {
     const props = {
-      text: "Header text",
-      history: {
-        push: jest.fn()
-      }
+      cover: "cover",
+      title: "card title",
+      subTitle: "sub title",
     }
     const tree = renderer
-      .create(<Header {...props} />)
+      .create(<Card {...props} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   })

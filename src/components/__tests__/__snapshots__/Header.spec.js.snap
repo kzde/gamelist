@@ -5,7 +5,8 @@ exports[`Header should renders correctly 1`] = `
   className="Header__Wrapper-sc-14t63oa-0 gSsvhl"
 >
   <div
-    className="Header__Logo-sc-14t63oa-2 hxLFmZ"
+    className="Header__Logo-sc-14t63oa-2 bOSpyc"
+    onClick={[Function]}
   >
     <svg
       fill="none"

@@ -9,7 +9,8 @@ export const colorPalettes = {
 
 export const themeColor = {
   default: colorPalettes.black,
-  selected: colorPalettes.red
+  selected: colorPalettes.red,
+  hover: colorPalettes.red
 }
 
 export const textSizes = {

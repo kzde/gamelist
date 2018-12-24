@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should renders correctly 1`] = `
+<div
+  className="Card__Wrapper-sc-1gjobka-0 koANUj"
+>
+  <img
+    className="Card__Img-sc-1gjobka-1 gtqqmV"
+    src="cover"
+  />
+  <div
+    className="Card__Content-sc-1gjobka-2 bTjVxu"
+  >
+    <div
+      className="Card__Title-sc-1gjobka-3 eoHjKj"
+      onClick={[Function]}
+    >
+      card title
+    </div>
+    <div
+      className="Card__SubTitle-sc-1gjobka-4 dnoUZn"
+    >
+      sub title
+    </div>
+  </div>
+</div>
+`;

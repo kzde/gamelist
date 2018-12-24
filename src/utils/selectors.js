@@ -1,4 +1,3 @@
-import gamesObj from '../games.json';
-const { games } = gamesObj
 
-export const getGameDetailsByName = name => games.find(game => game.name === name);
+export const getGameDetailsByName = (games, name) => games.find(game => game.name === name);
+export const getGamesByPlatform = (games, platform) => games.filter(game => game.platform === platform);

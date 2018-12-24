@@ -2,7 +2,9 @@ import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import { getGameDetailsByName } from '../utils/selectors';
+import gamesObj from '../games.json';
 
+const { games } = gamesObj
 
 const Img = styled.img`
   width: 1440px;
@@ -18,7 +20,7 @@ const Shadow = styled.div`
 `
 
 const DetailsScreen = (props) => {
-  const details = getGameDetailsByName(props.match.params.gameName);
+  const details = getGameDetailsByName(games, props.match.params.gameName);
   return (
     <Fragment>
       <Header text="Game details" />

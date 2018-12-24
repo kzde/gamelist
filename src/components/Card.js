@@ -1,7 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom'
 import styled from 'styled-components';
-import { margins, cardSize, colorPalettes, textSizes } from '../utils/styleUtils';
+import { margins, cardSize, colorPalettes, textSizes, themeColor } from '../utils/styleUtils';
 
 const Wrapper = styled.div`
   width: ${cardSize.width};
@@ -10,7 +11,6 @@ const Wrapper = styled.div`
   border-radius: 8px;
   overflow: hidden;
 `;
-
 const Img = styled.img`
   width: ${cardSize.width};
   height: 411px;
@@ -23,6 +23,10 @@ const Content = styled.div`
 `
 const Title = styled.div`
   font-size: ${textSizes.normalText};
+  cursor: pointer;
+  &:hover {
+      color: ${themeColor.hover}
+    }
 `
 const SubTitle = styled.div`
 margin-top: ${margins.small};
@@ -30,19 +34,27 @@ font-size: ${textSizes.smallText};
 font-weight: 300;
 `;
 
-const Card = ({ title, cover, platForm }) => {
+const Card = (props) => {
+  const navTo = () => {
+    props.history.push(`/${props.title}`)
+  }
+
   return (
     <Wrapper>
-      <NavLink to={title}>
-      <Img src={cover} />
-        </NavLink>
+      <Img src={props.cover} />
       <Content>
-        <Title>{title}</Title>
-        <SubTitle>{platForm}</SubTitle>
+        <Title onClick={navTo}>{props.title}</Title>
+        <SubTitle>{props.subTitle}</SubTitle>
       </Content>
-
     </Wrapper>
   )
 }
 
-export default Card;
+Card.propTypes = {
+  cover: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
+}
+
+export const card = Card;
+export default withRouter(Card);
