@@ -8,7 +8,7 @@ import gamesObj from '../games.json';
 
 const { games } = gamesObj
 
-class CatalogScreen extends Component {
+class GamesCatalogScreen extends Component {
   constructor(props) {
     super(props);
     const defaultPlatform = choices.platforms[0];
@@ -41,4 +41,4 @@ class CatalogScreen extends Component {
   }
 }
 
-export default CatalogScreen;
+export default GamesCatalogScreen;

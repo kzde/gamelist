@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameDetailsScreen should renders correctly 1`] = `
+Array [
+  <Header
+    text="Game details"
+  />,
+  <div
+    className="GameDetailsScreen__Media-hv417b-0 kkMeuk"
+  >
+    <img
+      className="GameDetailsScreen__Img-hv417b-1 cVIWiH"
+      src="hero"
+    />
+    <div
+      className="GameDetailsScreen__Shadow-hv417b-2 dMgIes"
+    />
+  </div>,
+  <section
+    className="GameDetailsScreen__DetailSection-hv417b-3 RGBRp"
+  >
+    <Paper>
+      <DetailContent
+        content="description"
+        subTitle="platform"
+        title="name"
+      />
+    </Paper>
+  </section>,
+]
+`;

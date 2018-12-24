@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paper should renders correctly 1`] = `
+<div
+  className="Paper__Wrapper-xda1y4-0 dqgpZF"
+>
+  <div>
+    paper
+  </div>
+</div>
+`;

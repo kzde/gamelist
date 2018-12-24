@@ -4,13 +4,14 @@ export const colorPalettes = {
   black: '#333333',
   white: '#FFFFFF',
   red: '#FE6050',
-  lightGrey: '#E5E5E5'
+  lightGrey: '#E5E5E5',
 }
 
 export const themeColor = {
   default: colorPalettes.black,
   selected: colorPalettes.red,
-  hover: colorPalettes.red
+  hover: colorPalettes.red,
+  borderGrey: '#C4C4C4'
 }
 
 export const textSizes = {

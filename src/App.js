@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
-import CatalogScreen from './screens/CatalogScreen';
-import DetailsScreen from './screens/DetailsScreen';
+import CatalogScreen from './screens/GamesCatalogScreen';
+import DetailsScreen from './screens/GameDetailsScreen';
 import { colorPalettes } from './utils/styleUtils';
 
 const GlobalStyle = createGlobalStyle`
@@ -11,8 +11,12 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     font-family:  'Roboto', sans-serif; 
-    background: ${colorPalettes.lightGrey}
+    background: ${colorPalettes.lightGrey};
   }
+  img {
+    display: block;
+  }
+  
 `
 
 const App = () => (

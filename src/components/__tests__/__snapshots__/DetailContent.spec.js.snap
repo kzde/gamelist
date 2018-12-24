@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailContent should renders correctly 1`] = `
+<article
+  className="DetailContent__Article-z4i9bw-0 gFleuy"
+>
+  <header
+    className="DetailContent__Header-z4i9bw-1 fscaau"
+  >
+    <span
+      className="DetailContent__Title-z4i9bw-2 isfRBj"
+    >
+      Title
+    </span>
+    <span>
+      Subtitle is an option
+    </span>
+  </header>
+  <div
+    className="DetailContent__Content-z4i9bw-3 bXyuRW"
+  >
+    content here
+  </div>
+</article>
+`;

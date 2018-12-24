@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CatalogScreen should renders correctly 1`] = `
+exports[`GamesCatalogScreen should renders correctly 1`] = `
 Array [
   <Header
     text="Games catalog PS4"
