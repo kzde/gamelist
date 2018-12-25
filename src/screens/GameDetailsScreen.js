@@ -6,17 +6,18 @@ import { getGameDetailsByName } from '../utils/selectors';
 import gamesObj from '../games.json';
 import Paper from '../components/Paper';
 import DetailContent from '../components/DetailContent';
+import NotFoundScreen from './NotFoundScreen';
 
 const { games } = gamesObj;
 
 const Media = styled.div``;
 const Img = styled.img`
-  width: 1440px;
+  width: 100%;
   height: 368px;
 `;
 const Shadow = styled.div`
   position: absolute;
-  width: 1440px;
+  width: 100%;
   height: 368px;
   box-shadow: inset 0px -16px 16px rgba(0, 0, 0, 0.25);
   top: 64px;
@@ -28,25 +29,31 @@ const DetailSection = styled.section`
 
 const GameDetailsScreen = (props) => {
   const gameName = props.match.params.gameName;
-  const { hero, description, name, platform } = getGameDetailsByName(games, gameName);
+  const gameDetails = getGameDetailsByName(games, gameName);
   return (
     <Fragment>
-      <Header text="Game details" />
-      <Media>
-        <Img src={hero} />
-        <Shadow />
-      </Media>
-      <DetailSection>
-        <Paper
-          children={
-            <DetailContent
-              title={name}
-              subTitle={platform}
-              content={description}
+      {gameDetails ?
+        <Fragment>
+          <Header text="Game details" />
+          <Media>
+            <Img src={gameDetails.hero} />
+            <Shadow />
+          </Media>
+          <DetailSection>
+            <Paper
+              children={
+                <DetailContent
+                  title={gameDetails.name}
+                  subTitle={gameDetails.platform}
+                  content={gameDetails.description}
+                />
+              }
             />
-          }
-        />
-      </DetailSection>
+          </DetailSection>
+        </Fragment>
+        : <NotFoundScreen />
+      }
+
     </Fragment>
   )
 }

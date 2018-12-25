@@ -7,10 +7,10 @@ export const colorPalettes = {
   lightGrey: '#E5E5E5',
 }
 
-export const themeColor = {
+export const themeColors = {
   default: colorPalettes.black,
   selected: colorPalettes.red,
-  hover: colorPalettes.red,
+  link: colorPalettes.red,
   borderGrey: '#C4C4C4'
 }
 

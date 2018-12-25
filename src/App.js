@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import CatalogScreen from './screens/GamesCatalogScreen';
 import DetailsScreen from './screens/GameDetailsScreen';
 import { colorPalettes } from './utils/styleUtils';
+import NotFoundScreen from './screens/NotFoundScreen';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -16,21 +17,18 @@ const GlobalStyle = createGlobalStyle`
   img {
     display: block;
   }
-  
 `
 
 const App = () => (
   <Fragment>
     <Router>
-      <div>
+      <Switch>
         <Route exact path="/" component={CatalogScreen} />
         <Route path="/:gameName" component={DetailsScreen} />
-      </div>
+        <Route component={NotFoundScreen} />
+      </Switch>
     </Router>
     <GlobalStyle />
   </Fragment>
 )
-
-
-
 export default App;

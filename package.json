@@ -23,6 +23,7 @@
     "prop-types": "^15.6.2",
     "react-test-renderer": "^16.7.0",
     "styled-components": "^4.1.3",
+    "url-loader": "^1.1.2",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "3.1.10"
@@ -35,6 +36,9 @@
   "jest": {
     "transform": {
       "^.+\\.js$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(png|svg|jpg|gif)$": "<rootDir>/__mocks__/fileMock.js"
     },
     "setupTestFrameworkScriptFile": "<rootDir>setupTest.js"
   }

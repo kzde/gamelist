@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageBox should renders correctly 1`] = `
+<div
+  className="MessageBox__Wrapper-sc-13sbgul-0 eGEFDx"
+>
+  <p
+    className="MessageBox__Content-sc-13sbgul-1 feAuva"
+  />
+</div>
+`;

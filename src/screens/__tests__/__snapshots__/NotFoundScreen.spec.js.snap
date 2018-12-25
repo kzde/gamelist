@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundScreen should renders correctly 1`] = `
+Array [
+  <Header
+    text="Games catalog 404"
+  />,
+  <img
+    className="NotFoundScreen__Img-sc-1oziblc-0 cWrCpE"
+    src="test-file-stub"
+  />,
+  <MessageBox
+    content="Every thing is fine, it's just a new adventure!"
+  />,
+]
+`;

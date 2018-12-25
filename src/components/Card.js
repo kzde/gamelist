@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom'
 import styled from 'styled-components';
-import { margins, cardSize, colorPalettes, textSizes, themeColor } from '../utils/styleUtils';
+import { margins, cardSize, colorPalettes, textSizes, themeColors } from '../utils/styleUtils';
 
 const Wrapper = styled.div`
   width: ${cardSize.width};
@@ -25,7 +25,7 @@ const Title = styled.div`
   font-size: ${textSizes.normalText};
   cursor: pointer;
   &:hover {
-      color: ${themeColor.hover}
+      color: ${themeColors.link}
     }
 `
 const SubTitle = styled.div`

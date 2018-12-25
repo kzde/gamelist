@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { themeColor, margins, colorPalettes, textSizes } from '../utils/styleUtils';
+import { themeColors, margins, colorPalettes, textSizes } from '../utils/styleUtils';
 
 const Wrapper = styled.div`
   padding: ${margins.medium};
@@ -15,7 +15,7 @@ const Label = styled.span`
   &+span {
     margin-left: 12px;
   };
-  color: ${props => props.selected ? `${themeColor.selected}` : `${themeColor.default}`};
+  color: ${props => props.selected ? `${themeColors.selected}` : `${themeColors.default}`};
 `;
 
 const PlatformChoices = (props) => (
