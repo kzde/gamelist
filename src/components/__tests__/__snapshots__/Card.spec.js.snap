@@ -2,10 +2,10 @@
 
 exports[`Card should renders correctly 1`] = `
 <div
-  className="Card__Wrapper-sc-1gjobka-0 koANUj"
+  className="Card__Wrapper-sc-1gjobka-0 hyMFrm"
 >
   <img
-    className="Card__Img-sc-1gjobka-1 gtqqmV"
+    className="Card__Img-sc-1gjobka-1 fekier"
     src="cover"
   />
   <div

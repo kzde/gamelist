@@ -1,16 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { textSizes, margins } from '../utils/styleUtils';
+import { textSizes, margins, media } from '../utils/styleUtils';
 
 const Article = styled.article`
-  padding: 64px 84px;
   font-size: ${textSizes.normalText};
 `;
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${media.phone`
+    flex-direction: column;
+    align-items: flex-start;
+    span+span {
+      margin-top: ${margins.medium}
+    }
+  `}
 `;
 const Title = styled.span`
   font-size: ${textSizes.titleText};

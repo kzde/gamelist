@@ -2,10 +2,10 @@
 
 exports[`DetailContent should renders correctly 1`] = `
 <article
-  className="DetailContent__Article-z4i9bw-0 gFleuy"
+  className="DetailContent__Article-z4i9bw-0 hvhKVl"
 >
   <header
-    className="DetailContent__Header-z4i9bw-1 fscaau"
+    className="DetailContent__Header-z4i9bw-1 ebDmfu"
   >
     <span
       className="DetailContent__Title-z4i9bw-2 isfRBj"

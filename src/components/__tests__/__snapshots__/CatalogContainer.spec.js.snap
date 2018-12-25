@@ -2,7 +2,7 @@
 
 exports[`CatalogContainer should renders correctly 1`] = `
 <div
-  className="CatalogContainer__Wrapper-sc-1ewu4fh-0 jTwKqB"
+  className="CatalogContainer__Wrapper-sc-1ewu4fh-0 eJAMJw"
 >
   <Card
     cover="cover"

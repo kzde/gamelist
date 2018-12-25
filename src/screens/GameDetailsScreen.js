@@ -24,7 +24,7 @@ const Shadow = styled.div`
   left: 0;
 `
 const DetailSection = styled.section`
-  margin: 64px 136px 89px 136px;
+  /* margin: 64px 136px 89px 136px; */
 `
 
 const GameDetailsScreen = (props) => {

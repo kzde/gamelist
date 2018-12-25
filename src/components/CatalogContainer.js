@@ -10,13 +10,13 @@ const Wrapper = styled.div`
   background: ${colorPalettes.lightGrey};
   padding: ${margins.medium};
   padding-top: 0;
-  ${media.desktop`grid-template-columns: repeat(3, ${cardSize.width});`}
+  ${media.giant`grid-template-columns: repeat(3, ${cardSize.width});`}
+  ${media.desktop`grid-template-columns: repeat(2, ${cardSize.width});`}
   ${media.tablet`grid-template-columns: repeat(2, ${cardSize.width});`}
-  ${media.phone`grid-template-columns: repeat(1, ${cardSize.width});`}
+  ${media.phone`grid-template-columns: repeat(1, ${cardSize.phoneWidth});`}
 `;
 
-const CatalogContainer = ({games}) => {
-  return (
+const CatalogContainer = ({games}) => (
     <Wrapper>
       {
         games.map((game, index) => {
@@ -31,6 +31,6 @@ const CatalogContainer = ({games}) => {
     </Wrapper>
 
   )
-}
+
 
 export default CatalogContainer;

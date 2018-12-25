@@ -31,7 +31,7 @@ export const basicMargin = 16;
 export const cardSize = {
   width: '328px',
   height: '492px',
-  widthForPhone: '359px'
+  phoneWidth: '359px'
 }
 
 const sizes = {
