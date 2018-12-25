@@ -4,9 +4,7 @@ exports[`GameDetailsScreen should renders NotFoundScreen if gameDetails is undef
 
 exports[`GameDetailsScreen should renders correctly 1`] = `
 Array [
-  <Header
-    text="Game details"
-  />,
+  <Header />,
   <div
     className="GameDetailsScreen__Media-hv417b-0 kkMeuk"
   >

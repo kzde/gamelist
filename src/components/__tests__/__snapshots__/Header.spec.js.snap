@@ -2,7 +2,7 @@
 
 exports[`Header should renders correctly 1`] = `
 <div
-  className="Header__Wrapper-sc-14t63oa-0 gSsvhl"
+  className="Header__Wrapper-sc-14t63oa-0 iVkzIE"
 >
   <div
     className="Header__Logo-sc-14t63oa-2 bOSpyc"
@@ -22,9 +22,27 @@ exports[`Header should renders correctly 1`] = `
     </svg>
   </div>
   <div
-    className="Header__Title-sc-14t63oa-1 kzoGly"
+    className="Header__Title-sc-14t63oa-1 drMpun"
   >
     Header text
+  </div>
+  <div
+    className="Header__Translate-sc-14t63oa-3 bTdPQB"
+  >
+    <span
+      className="Header__Lang-sc-14t63oa-4 eWBdJw"
+      onClick={[Function]}
+      selected={true}
+    >
+      En
+    </span>
+    <span
+      className="Header__Lang-sc-14t63oa-4 BkHxs"
+      onClick={[Function]}
+      selected={false}
+    >
+      Fr
+    </span>
   </div>
 </div>
 `;

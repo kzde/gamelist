@@ -5,6 +5,9 @@ import choices from '../platforms.json'
 import CatalogContainer from '../components/CatalogContainer';
 import { getGamesByPlatform } from '../utils/selectors';
 import gamesObj from '../games.json';
+import withI18n from '../contexts/withI18n';
+import PropTypes from 'prop-types';
+
 
 const { games } = gamesObj
 
@@ -29,7 +32,7 @@ class GamesCatalogScreen extends Component {
   render() {
     return (
       <Fragment>
-        <Header text={`Games catalog ${this.state.selectedPlatform}`} />
+        <Header text={`${this.props.i18n._('catalog.header.title')} ${this.state.selectedPlatform}`} />
         <PlatformChoices
           choices={choices.platforms}
           handleClick={this.platformSelected}
@@ -41,4 +44,8 @@ class GamesCatalogScreen extends Component {
   }
 }
 
-export default GamesCatalogScreen;
+GamesCatalogScreen.propsType = {
+  i18n: PropTypes.object.isRequired
+}
+export const gamesCatalogScreen = GamesCatalogScreen;
+export default withI18n(GamesCatalogScreen);

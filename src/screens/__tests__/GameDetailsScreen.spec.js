@@ -15,9 +15,12 @@ describe('GameDetailsScreen', () => {
         params: {
           gameName: '94%'
         }
+      },
+      i18n: {
+        _: jest.fn().mockReturnValue('translation fake')
       }
     };
-    const getGameDetailsByNameSpy = jest.fn().mockReturnValue({hero: 'hero', description:'description', name:'name', platform: 'platform'})
+    const getGameDetailsByNameSpy = jest.fn().mockReturnValue({ hero: 'hero', description: 'description', name: 'name', platform: 'platform' })
     selectors.getGameDetailsByName = getGameDetailsByNameSpy;
     const tree = renderer
       .create(<GameDetailsScreen {...props} />)
@@ -31,6 +34,9 @@ describe('GameDetailsScreen', () => {
         params: {
           gameName: '94%'
         }
+      },
+      i18n: {
+        _: jest.fn().mockReturnValue('translation fake')
       }
     };
     const getGameDetailsByNameSpy = jest.fn().mockReturnValue(undefined);

@@ -3,7 +3,7 @@
 exports[`GamesCatalogScreen should renders correctly 1`] = `
 Array [
   <Header
-    text="Games catalog PS4"
+    text="translation fake PS4"
   />,
   <PlatformChoices
     choices={

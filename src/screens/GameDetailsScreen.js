@@ -7,6 +7,8 @@ import gamesObj from '../games.json';
 import Paper from '../components/Paper';
 import DetailContent from '../components/DetailContent';
 import NotFoundScreen from './NotFoundScreen';
+import withI18n from '../contexts/withI18n';
+
 
 const { games } = gamesObj;
 
@@ -24,7 +26,6 @@ const Shadow = styled.div`
   left: 0;
 `
 const DetailSection = styled.section`
-  /* margin: 64px 136px 89px 136px; */
 `
 
 const GameDetailsScreen = (props) => {
@@ -34,7 +35,7 @@ const GameDetailsScreen = (props) => {
     <Fragment>
       {gameDetails ?
         <Fragment>
-          <Header text="Game details" />
+          <Header text={props.i18n._('detail.header.title')} />
           <Media>
             <Img src={gameDetails.hero} />
             <Shadow />
@@ -63,7 +64,8 @@ GameDetailsScreen.propTypes = {
     match: PropTypes.shape({
       params: PropTypes.string.isRequired
     })
-  }).isRequired
+  }).isRequired,
+  i18n: PropTypes.object.isRequired
 };
 
-export default GameDetailsScreen;
+export default withI18n(GameDetailsScreen);
