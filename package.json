@@ -6,15 +6,19 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development --hot",
     "build": "webpack --mode production",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/react": "^4.1.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
     "babel-plugin-styled-components": "^1.10.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",

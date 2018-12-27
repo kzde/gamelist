@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`I18nProvider should renders correctly 1`] = `<div />`;
+exports[`I18nProvider should renders correctly 1`] = `
+<div>
+  Some test
+</div>
+`;

@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import Header from '../components/Header';
 import PlatformChoices from '../components/PlatformChoices';
-import choices from '../platforms.json'
+import choices from '../datas/platforms.json'
 import CatalogContainer from '../components/CatalogContainer';
 import { getGamesByPlatform } from '../utils/selectors';
-import gamesObj from '../games.json';
+import gamesObj from '../datas/games.json';
 import withI18n from '../contexts/withI18n';
 import PropTypes from 'prop-types';
 

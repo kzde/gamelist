@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import { getGameDetailsByName } from '../utils/selectors';
-import gamesObj from '../games.json';
+import gamesObj from '../datas/games.json';
 import Paper from '../components/Paper';
 import DetailContent from '../components/DetailContent';
 import NotFoundScreen from './NotFoundScreen';

@@ -6,6 +6,12 @@
     "plugins": [
         [
             "babel-plugin-styled-components"
-        ]
-    ]
+        ],
+        "@babel/plugin-syntax-dynamic-import"
+    ],
+    "env": {
+        "test": {
+            "plugins": ["dynamic-import-node"]
+        }
+    }
 }

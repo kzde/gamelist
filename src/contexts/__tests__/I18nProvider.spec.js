@@ -11,7 +11,7 @@ const props = {
 describe('I18nProvider', () => {
   it('should renders correctly', () => {
     const tree = renderer
-      .create(<I18nProvider {...props} />)
+      .create(<I18nProvider {...props} ><div>Some test</div></I18nProvider>)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

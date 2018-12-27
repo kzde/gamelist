@@ -1,10 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
-import CatalogScreen from './screens/GamesCatalogScreen';
-import DetailsScreen from './screens/GameDetailsScreen';
 import { colorPalettes } from './utils/styleUtils';
-import NotFoundScreen from './screens/NotFoundScreen';
+
+const CatalogScreen = lazy(() => import('./screens/GamesCatalogScreen'));
+const DetailsScreen = lazy(() => import('./screens/GameDetailsScreen'));
+const NotFoundScreen = lazy(() => import('./screens/NotFoundScreen'));
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -22,11 +23,13 @@ const GlobalStyle = createGlobalStyle`
 const App = () => (
   <Fragment>
     <Router>
+      <Suspense fallback={<div>...Loading</div>}>
       <Switch>
         <Route exact path="/" component={CatalogScreen} />
         <Route path="/:gameName" component={DetailsScreen} />
         <Route component={NotFoundScreen} />
       </Switch>
+      </Suspense>
     </Router>
     <GlobalStyle />
   </Fragment>

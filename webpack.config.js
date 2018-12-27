@@ -3,7 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: [
+        "core-js/modules/es6.promise",
+        "core-js/modules/es6.array.iterator",
+        path.resolve(__dirname, './src/index.js')
+    ],
     devServer: {
         contentBase: '/dist',
         historyApiFallback: true
@@ -11,10 +15,11 @@ module.exports = {
     devtool: 'inline-source-map',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
     },
     plugins: [
-        new HtmlWebpackPlugin({  
+        new HtmlWebpackPlugin({
             template: 'index.html'
         })
     ],
