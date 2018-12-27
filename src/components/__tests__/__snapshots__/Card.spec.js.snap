@@ -2,7 +2,8 @@
 
 exports[`Card should renders correctly 1`] = `
 <div
-  className="Card__Wrapper-sc-1gjobka-0 hyMFrm"
+  className="Card__Wrapper-sc-1gjobka-0 cyrRzz"
+  onClick={[Function]}
 >
   <img
     className="Card__Img-sc-1gjobka-1 fekier"
@@ -12,10 +13,19 @@ exports[`Card should renders correctly 1`] = `
     className="Card__Content-sc-1gjobka-2 bTjVxu"
   >
     <div
-      className="Card__Title-sc-1gjobka-3 eoHjKj"
-      onClick={[Function]}
+      className="Card__Title-sc-1gjobka-3 hkmeWs"
     >
-      card title
+      <div
+        className="Link__Wrapper-sc-1kz7l5q-0 jgxdgC"
+        onClick={[Function]}
+      >
+        <span
+          className="Link__Content-sc-1kz7l5q-1 gboxtL"
+          data-hover="card title"
+        >
+          card title
+        </span>
+      </div>
     </div>
     <div
       className="Card__SubTitle-sc-1gjobka-4 dnoUZn"

@@ -1,15 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom'
-import styled from 'styled-components';
 import { margins, cardSize, colorPalettes, textSizes, themeColors } from '../utils/styleUtils';
+import Link from './Link';
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: ${props => props.width || `100%` };
   height: ${cardSize.height};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   overflow: hidden;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  &:hover{
+    opacity:1;
+  }
 `;
 const Img = styled.img`
   width: 100%;
@@ -23,10 +30,6 @@ const Content = styled.div`
 `
 const Title = styled.div`
   font-size: ${textSizes.normalText};
-  cursor: pointer;
-  &:hover {
-      color: ${themeColors.link}
-    }
 `
 const SubTitle = styled.div`
 margin-top: ${margins.small};
@@ -40,10 +43,16 @@ const Card = (props) => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper width={props.width} onClick={navTo}>
       <Img src={props.cover} />
       <Content>
-        <Title onClick={navTo}>{props.title}</Title>
+        <Title>
+          <Link
+            text={props.title}
+            handleClick={navTo}
+            textColor={themeColors.link}
+          />
+        </Title>
         <SubTitle>{props.subTitle}</SubTitle>
       </Content>
     </Wrapper>
