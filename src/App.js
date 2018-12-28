@@ -2,6 +2,7 @@ import React, { Fragment, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import { colorPalettes } from './utils/styleUtils';
+import Loader from './components/Loader';
 
 const CatalogScreen = lazy(() => import('./screens/GamesCatalogScreen'));
 const DetailsScreen = lazy(() => import('./screens/GameDetailsScreen'));
@@ -23,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 const App = () => (
   <Fragment>
     <Router>
-      <Suspense fallback={<div>...Loading</div>}>
+      <Suspense fallback={<Loader backgroundColor="black" size="60px" color="white"/>}>
       <Switch>
         <Route exact path="/" component={CatalogScreen} />
         <Route path="/:gameName" component={DetailsScreen} />

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader should renders correctly with custom params 1`] = `
+<div
+  className="Loader__Overlay-sc-1kdbz4n-0 cRLytn"
+>
+  <div
+    className="Loader__BounceCircle-sc-1kdbz4n-1 lgORSW"
+    size="60px"
+  >
+    <div
+      className="Loader__Shared-sc-1kdbz4n-2 Loader__FirstCircle-sc-1kdbz4n-3 bvUNKM"
+      color="white"
+    />
+    <div
+      className="Loader__Shared-sc-1kdbz4n-2 Loader__SecondCircle-sc-1kdbz4n-4 iWecok"
+      color="white"
+    />
+  </div>
+</div>
+`;
+
+exports[`Loader should renders correctly with default params 1`] = `
+<div
+  className="Loader__Overlay-sc-1kdbz4n-0 jRrUCI"
+>
+  <div
+    className="Loader__BounceCircle-sc-1kdbz4n-1 gMzLox"
+  >
+    <div
+      className="Loader__Shared-sc-1kdbz4n-2 Loader__FirstCircle-sc-1kdbz4n-3 dEJuc"
+    />
+    <div
+      className="Loader__Shared-sc-1kdbz4n-2 Loader__SecondCircle-sc-1kdbz4n-4 ekZDNY"
+    />
+  </div>
+</div>
+`;
