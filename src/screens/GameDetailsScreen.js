@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Header from '../components/Header';
@@ -8,7 +9,7 @@ import Paper from '../components/Paper';
 import DetailContent from '../components/DetailContent';
 import NotFoundScreen from './NotFoundScreen';
 import withI18n from '../contexts/withI18n';
-import { media } from '../utils/styleUtils';
+import { media, headerHeight } from '../utils/styleUtils';
 
 const { games } = gamesObj;
 
@@ -30,10 +31,17 @@ const Shadow = styled.div`
   width: 100%;
   height: 368px;
   box-shadow: inset 0px -16px 16px rgba(0, 0, 0, 0.25);
-  top: 64px;
+  top:0;
   left: 0;
 `;
 const DetailSection = styled.section``;
+const ContentWrapper = styled.div`
+  position:absolute;
+  top: ${headerHeight};
+  left:0;
+  right:0
+  bottom:0;
+`;
 
 const GameDetailsScreen = (props) => {
   const { gameName } = props.match.params;
@@ -43,19 +51,21 @@ const GameDetailsScreen = (props) => {
       {gameDetails ? (
         <Fragment>
           <Header text={props.i18n._('detail.header.title')} />
-          <Media>
-            <Img desktopSrc={gameDetails.hero} mobileSrc={gameDetails.cover} />
-            <Shadow />
-          </Media>
-          <DetailSection>
-            <Paper>
-              <DetailContent
-                title={gameDetails.name}
-                subTitle={gameDetails.platform}
-                content={gameDetails.description}
-              />
-            </Paper>
-          </DetailSection>
+          <ContentWrapper>
+            <Media>
+              <Img desktopSrc={gameDetails.hero} mobileSrc={gameDetails.cover} />
+              <Shadow />
+            </Media>
+            <DetailSection>
+              <Paper>
+                <DetailContent
+                  title={gameDetails.name}
+                  subTitle={gameDetails.platform}
+                  content={gameDetails.description}
+                />
+              </Paper>
+            </DetailSection>
+          </ContentWrapper>
         </Fragment>
       ) : (
         <NotFoundScreen />

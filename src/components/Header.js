@@ -4,15 +4,22 @@ import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 import withI18n from '../contexts/withI18n';
 import {
-  colorPalettes, headerHeight, textSizes, margins, themeColors
+  colorPalettes, headerHeight, textSizes, margins, themeColors, media
 } from '../utils/styleUtils';
 
 const Wrapper = styled.div`
+  position: fixed;
+  width: 100%;
+  z-index:1;
   display: flex;
   align-items: center;
   height: ${headerHeight};
   background: ${colorPalettes.black};
   color: ${colorPalettes.white};
+  padding-bottom: 1px;
+  ${media.phone`
+    position: relative;
+  `}
 `;
 
 const Title = styled.div`

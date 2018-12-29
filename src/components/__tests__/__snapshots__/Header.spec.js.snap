@@ -2,7 +2,7 @@
 
 exports[`Header should renders correctly 1`] = `
 <div
-  className="Header__Wrapper-sc-14t63oa-0 iVkzIE"
+  className="Header__Wrapper-sc-14t63oa-0 dyiQMu"
 >
   <div
     className="Header__Logo-sc-14t63oa-2 bOSpyc"

@@ -6,25 +6,29 @@ exports[`GameDetailsScreen should renders correctly 1`] = `
 Array [
   <Header />,
   <div
-    className="GameDetailsScreen__Media-hv417b-0 kkMeuk"
+    className="GameDetailsScreen__ContentWrapper-hv417b-4 bCMEhj"
   >
-    <img
-      className="GameDetailsScreen__Img-hv417b-1 lgVoMk"
-    />
     <div
-      className="GameDetailsScreen__Shadow-hv417b-2 eGXpau"
-    />
-  </div>,
-  <section
-    className="GameDetailsScreen__DetailSection-hv417b-3 gbdMTe"
-  >
-    <Paper>
-      <DetailContent
-        content="description"
-        subTitle="platform"
-        title="name"
+      className="GameDetailsScreen__Media-hv417b-0 kkMeuk"
+    >
+      <img
+        className="GameDetailsScreen__Img-hv417b-1 lgVoMk"
       />
-    </Paper>
-  </section>,
+      <div
+        className="GameDetailsScreen__Shadow-hv417b-2 iOgeaD"
+      />
+    </div>
+    <section
+      className="GameDetailsScreen__DetailSection-hv417b-3 gbdMTe"
+    >
+      <Paper>
+        <DetailContent
+          content="description"
+          subTitle="platform"
+          title="name"
+        />
+      </Paper>
+    </section>
+  </div>,
 ]
 `;
