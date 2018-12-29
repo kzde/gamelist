@@ -30,14 +30,14 @@ exports[`Header should renders correctly 1`] = `
     className="Header__Translate-sc-14t63oa-3 bTdPQB"
   >
     <span
-      className="Header__Lang-sc-14t63oa-4 eWBdJw"
+      className="Header__Lang-sc-14t63oa-4 jZfgyq"
       onClick={[Function]}
       selected={true}
     >
       En
     </span>
     <span
-      className="Header__Lang-sc-14t63oa-4 BkHxs"
+      className="Header__Lang-sc-14t63oa-4 eUUzzD"
       onClick={[Function]}
       selected={false}
     >

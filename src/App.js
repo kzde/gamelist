@@ -19,20 +19,20 @@ const GlobalStyle = createGlobalStyle`
   img {
     display: block;
   }
-`
+`;
 
 const App = () => (
   <Fragment>
     <Router>
-      <Suspense fallback={<Loader backgroundColor="black" size="60px" color="white"/>}>
-      <Switch>
-        <Route exact path="/" component={CatalogScreen} />
-        <Route path="/:gameName" component={DetailsScreen} />
-        <Route component={NotFoundScreen} />
-      </Switch>
+      <Suspense fallback={<Loader backgroundColor="black" size="60px" color="white" />}>
+        <Switch>
+          <Route exact path="/" component={CatalogScreen} />
+          <Route path="/:gameName" component={DetailsScreen} />
+          <Route component={NotFoundScreen} />
+        </Switch>
       </Suspense>
     </Router>
     <GlobalStyle />
   </Fragment>
-)
+);
 export default App;

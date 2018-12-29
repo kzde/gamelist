@@ -9,7 +9,6 @@ import DetailContent from '../components/DetailContent';
 import NotFoundScreen from './NotFoundScreen';
 import withI18n from '../contexts/withI18n';
 
-
 const { games } = gamesObj;
 
 const Media = styled.div``;
@@ -24,16 +23,15 @@ const Shadow = styled.div`
   box-shadow: inset 0px -16px 16px rgba(0, 0, 0, 0.25);
   top: 64px;
   left: 0;
-`
-const DetailSection = styled.section`
-`
+`;
+const DetailSection = styled.section``;
 
 const GameDetailsScreen = (props) => {
-  const gameName = props.match.params.gameName;
+  const { gameName } = props.match.params;
   const gameDetails = getGameDetailsByName(games, gameName);
   return (
     <Fragment>
-      {gameDetails ?
+      {gameDetails ? (
         <Fragment>
           <Header text={props.i18n._('detail.header.title')} />
           <Media>
@@ -41,28 +39,26 @@ const GameDetailsScreen = (props) => {
             <Shadow />
           </Media>
           <DetailSection>
-            <Paper
-              children={
-                <DetailContent
-                  title={gameDetails.name}
-                  subTitle={gameDetails.platform}
-                  content={gameDetails.description}
-                />
-              }
-            />
+            <Paper>
+              <DetailContent
+                title={gameDetails.name}
+                subTitle={gameDetails.platform}
+                content={gameDetails.description}
+              />
+            </Paper>
           </DetailSection>
         </Fragment>
-        : <NotFoundScreen />
-      }
-
+      ) : (
+        <NotFoundScreen />
+      )}
     </Fragment>
-  )
-}
+  );
+};
 
 GameDetailsScreen.propTypes = {
   match: PropTypes.shape({
-    match: PropTypes.shape({
-      params: PropTypes.string.isRequired
+    params: PropTypes.shape({
+      gameName: PropTypes.string.isRequired
     })
   }).isRequired,
   i18n: PropTypes.object.isRequired

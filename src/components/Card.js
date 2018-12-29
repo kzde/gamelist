@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom'
-import { margins, cardSize, colorPalettes, textSizes, themeColors } from '../utils/styleUtils';
+import { withRouter } from 'react-router-dom';
+import {
+  margins, cardSize, colorPalettes, textSizes, themeColors
+} from '../utils/styleUtils';
 import Link from './Link';
 
 const Wrapper = styled.div`
-  width: ${props => props.width || `100%` };
+  width: ${props => props.width || '100%'};
   height: ${cardSize.height};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
@@ -14,8 +16,8 @@ const Wrapper = styled.div`
   opacity: 0.7;
   cursor: pointer;
   transition: opacity 0.3s;
-  &:hover{
-    opacity:1;
+  &:hover {
+    opacity: 1;
   }
 `;
 const Img = styled.img`
@@ -27,43 +29,43 @@ const Content = styled.div`
   height: 81px;
   background: ${colorPalettes.white};
   padding: ${margins.medium};
-`
+`;
 const Title = styled.div`
   font-size: ${textSizes.normalText};
-`
+`;
 const SubTitle = styled.div`
-margin-top: ${margins.small};
-font-size: ${textSizes.smallText};
-font-weight: 300;
+  margin-top: ${margins.small};
+  font-size: ${textSizes.smallText};
+  font-weight: 300;
 `;
 
 const Card = (props) => {
   const navTo = () => {
-    props.history.push(`/${props.title}`)
-  }
+    props.history.push(`/${props.title}`);
+  };
 
   return (
     <Wrapper width={props.width} onClick={navTo}>
       <Img src={props.cover} />
       <Content>
         <Title>
-          <Link
-            text={props.title}
-            handleClick={navTo}
-            textColor={themeColors.link}
-          />
+          <Link text={props.title} handleClick={navTo} textColor={themeColors.link} />
         </Title>
         <SubTitle>{props.subTitle}</SubTitle>
       </Content>
     </Wrapper>
-  )
-}
+  );
+};
 
 Card.propTypes = {
   cover: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
-}
+  width: PropTypes.string,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired
+};
 
 export const card = Card;
 export default withRouter(Card);

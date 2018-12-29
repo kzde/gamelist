@@ -9,13 +9,11 @@ const props = {
     { name: 'game', platform: 'platform', cover: 'cover' },
     { name: 'another game', platform: 'another platform', cover: 'another cover' }
   ]
-}
+};
 
 describe('CatalogContainer', () => {
   it('should renders correctly', () => {
-    const tree = renderer
-      .create(<CatalogContainer {...props} />)
-      .toJSON();
+    const tree = renderer.create(<CatalogContainer {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
-  })
-})
+  });
+});

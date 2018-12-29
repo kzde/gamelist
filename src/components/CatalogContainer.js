@@ -1,7 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Card from './Card';
-import { colorPalettes, margins, cardSize, media } from '../utils/styleUtils';
+import {
+  colorPalettes, margins, cardSize, media
+} from '../utils/styleUtils';
 
 const Wrapper = styled.div`
   display: grid;
@@ -16,21 +19,20 @@ const Wrapper = styled.div`
   ${media.phone`grid-template-columns: repeat(1, ${cardSize.phoneWidth});`}
 `;
 
-const CatalogContainer = ({games}) => (
-    <Wrapper>
-      {
-        games.map((game, index) => {
-          return <Card
-            key={`${game.name}${index}`}
-            title={game.name}
-            subTitle={game.platform}
-            cover={game.cover}
-          />
-        })
-      }
-    </Wrapper>
+const CatalogContainer = ({ games }) => (
+  <Wrapper>
+    {games.map((game, index) => (
+        <Card
+          key={`${game.name}${index}`}
+          title={game.name}
+          subTitle={game.platform}
+          cover={game.cover}
+        />
+    ))}
+  </Wrapper>
+);
 
-  )
-
-
+CatalogContainer.propTypes = {
+  games: PropTypes.arrayOf(PropTypes.object).isRequired
+};
 export default CatalogContainer;

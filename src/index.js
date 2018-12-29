@@ -7,4 +7,5 @@ ReactDOM.render(
   <I18nProvider>
     <App />
   </I18nProvider>,
-  document.getElementById('root'));
+  document.getElementById('root'),
+);

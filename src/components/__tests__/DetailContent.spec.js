@@ -10,9 +10,7 @@ const props = {
 
 describe('DetailContent', () => {
   it('should renders correctly', () => {
-    const tree = renderer
-      .create(<DetailContent {...props} />)
-      .toJSON();
+    const tree = renderer.create(<DetailContent {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
-  })
-})
+  });
+});

@@ -6,6 +6,8 @@ exports[`MessageBox should renders correctly 1`] = `
 >
   <p
     className="MessageBox__Content-sc-13sbgul-1 feAuva"
-  />
+  >
+    Messages
+  </p>
 </div>
 `;

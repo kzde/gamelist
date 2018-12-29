@@ -6,7 +6,7 @@ exports[`Link should renders correctly 1`] = `
   onClick={[Function]}
 >
   <span
-    className="Link__Content-sc-1kz7l5q-1 jkuwod"
+    className="Link__Content-sc-1kz7l5q-1 gOEnav"
     data-hover="link test"
   >
     link test

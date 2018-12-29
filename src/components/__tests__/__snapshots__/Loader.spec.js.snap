@@ -9,11 +9,11 @@ exports[`Loader should renders correctly with custom params 1`] = `
     size="60px"
   >
     <div
-      className="Loader__Shared-sc-1kdbz4n-2 Loader__FirstCircle-sc-1kdbz4n-3 bvUNKM"
+      className="Loader__Shared-sc-1kdbz4n-2 Loader__FirstCircle-sc-1kdbz4n-3 gyWvVa"
       color="white"
     />
     <div
-      className="Loader__Shared-sc-1kdbz4n-2 Loader__SecondCircle-sc-1kdbz4n-4 iWecok"
+      className="Loader__Shared-sc-1kdbz4n-2 Loader__SecondCircle-sc-1kdbz4n-4 gAbUBI"
       color="white"
     />
   </div>
@@ -26,12 +26,15 @@ exports[`Loader should renders correctly with default params 1`] = `
 >
   <div
     className="Loader__BounceCircle-sc-1kdbz4n-1 gMzLox"
+    size="40px"
   >
     <div
-      className="Loader__Shared-sc-1kdbz4n-2 Loader__FirstCircle-sc-1kdbz4n-3 dEJuc"
+      className="Loader__Shared-sc-1kdbz4n-2 Loader__FirstCircle-sc-1kdbz4n-3 clMjet"
+      color="black"
     />
     <div
-      className="Loader__Shared-sc-1kdbz4n-2 Loader__SecondCircle-sc-1kdbz4n-4 ekZDNY"
+      className="Loader__Shared-sc-1kdbz4n-2 Loader__SecondCircle-sc-1kdbz4n-4 hpMKKM"
+      color="black"
     />
   </div>
 </div>

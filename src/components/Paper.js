@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { colorPalettes, themeColors, media, margins } from '../utils/styleUtils';
+import {
+  colorPalettes, themeColors, media, margins
+} from '../utils/styleUtils';
 
 const Wrapper = styled.div`
   background: ${colorPalettes.white};
@@ -24,11 +26,7 @@ const Wrapper = styled.div`
   
 `;
 
-const Paper = ({ children }) => (
-  <Wrapper>
-    {children}
-  </Wrapper>
-)
+const Paper = ({ children }) => <Wrapper>{children}</Wrapper>;
 
 Paper.propTypes = {
   children: PropTypes.element.isRequired

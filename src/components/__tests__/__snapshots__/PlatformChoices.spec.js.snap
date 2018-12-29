@@ -5,14 +5,14 @@ exports[`PlatformChoices should renders correctly 1`] = `
   className="PlatformChoices__Wrapper-sc-1bsu13e-0 jyEzSo"
 >
   <span
-    className="PlatformChoices__Label-sc-1bsu13e-1 iJtTUN"
+    className="PlatformChoices__Label-sc-1bsu13e-1 jeGRun"
     onClick={[Function]}
     selected={true}
   >
     platform
   </span>
   <span
-    className="PlatformChoices__Label-sc-1bsu13e-1 mVAbY"
+    className="PlatformChoices__Label-sc-1bsu13e-1 iIEBRI"
     onClick={[Function]}
     selected={false}
   >
