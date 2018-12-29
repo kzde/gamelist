@@ -8,6 +8,7 @@ import Paper from '../components/Paper';
 import DetailContent from '../components/DetailContent';
 import NotFoundScreen from './NotFoundScreen';
 import withI18n from '../contexts/withI18n';
+import { media } from '../utils/styleUtils';
 
 const { games } = gamesObj;
 
@@ -15,6 +16,14 @@ const Media = styled.div``;
 const Img = styled.img`
   width: 100%;
   height: 368px;
+  background: url(${props => props.desktopSrc});
+  background-repeat: no-repeat;
+  ${media.phone`
+    background: url(${props => props.mobileSrc});
+    background-repeat: no-repeat;
+    background-position:center;
+  `}
+  background-position:center;
 `;
 const Shadow = styled.div`
   position: absolute;
@@ -35,7 +44,7 @@ const GameDetailsScreen = (props) => {
         <Fragment>
           <Header text={props.i18n._('detail.header.title')} />
           <Media>
-            <Img src={gameDetails.hero} />
+            <Img desktopSrc={gameDetails.hero} mobileSrc={gameDetails.cover} />
             <Shadow />
           </Media>
           <DetailSection>
