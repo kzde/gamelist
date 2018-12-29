@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClickableText should renders correctly 1`] = `
+<div
+  className="ClickableText__Wrapper-sc-1hvvc01-0 gReZzT"
+>
+  <span
+    className="ClickableText__Content-sc-1hvvc01-1 khlrPb"
+    data-hover="link test"
+  >
+    link test
+  </span>
+</div>
+`;
