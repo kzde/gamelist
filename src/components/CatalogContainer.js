@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
 import Card from './Card';
 import {
   colorPalettes, margins, cardSize, media
@@ -8,31 +9,41 @@ import {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, ${cardSize.width});
+  grid-template-columns: repeat(auto-fill, minmax(${cardSize.width}, 4fr));
   grid-gap: ${margins.large};
+  justify-items: center;
   background: ${colorPalettes.lightGrey};
   padding: ${margins.medium};
   padding-top: 0;
-  ${media.giant`grid-template-columns: repeat(3, ${cardSize.width});`}
-  ${media.desktop`grid-template-columns: repeat(2, ${cardSize.width});`}
-  ${media.tablet`grid-template-columns: repeat(2, ${cardSize.width});`}
-  ${media.phone`grid-template-columns: repeat(1, ${cardSize.phoneWidth});`}
+  ${media.phone`padding: ${margins.small};
+  `}
 `;
 
-const CatalogContainer = ({ games }) => (
-  <Wrapper>
-    {games.map((game, index) => (
+const CatalogContainer = ({ games, history }) => {
+  const navTo = (params) => {
+    history.push(`/${params}`);
+  };
+  return (
+    <Wrapper>
+      {games.map((game, index) => (
         <Card
           key={`${game.name}${index}`}
           title={game.name}
           subTitle={game.platform}
           cover={game.cover}
+          maxWidth={cardSize.phoneWidth}
+          handleClick={navTo}
         />
-    ))}
-  </Wrapper>
-);
+      ))}
+    </Wrapper>
+  );
+};
 
 CatalogContainer.propTypes = {
-  games: PropTypes.arrayOf(PropTypes.object).isRequired
+  games: PropTypes.arrayOf(PropTypes.object).isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired
 };
-export default CatalogContainer;
+export const catalogContainer = CatalogContainer;
+export default withRouter(CatalogContainer);

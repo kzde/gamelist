@@ -6,7 +6,7 @@ exports[`GameDetailsScreen should renders correctly 1`] = `
 Array [
   <Header />,
   <div
-    className="GameDetailsScreen__ContentWrapper-hv417b-4 bCMEhj"
+    className="GameDetailsScreen__ContentWrapper-hv417b-4 XGYst"
   >
     <div
       className="GameDetailsScreen__Media-hv417b-0 kkMeuk"

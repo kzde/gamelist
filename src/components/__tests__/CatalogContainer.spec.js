@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import CatalogContainer from '../CatalogContainer';
+import { catalogContainer as CatalogContainer } from '../CatalogContainer';
 
 jest.mock('../Card', () => 'Card');
 
@@ -8,7 +8,10 @@ const props = {
   games: [
     { name: 'game', platform: 'platform', cover: 'cover' },
     { name: 'another game', platform: 'another platform', cover: 'another cover' }
-  ]
+  ],
+  history: {
+    push: () => {}
+  }
 };
 
 describe('CatalogContainer', () => {

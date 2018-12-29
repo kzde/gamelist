@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 import {
   margins, cardSize, colorPalettes, textSizes, themeColors
 } from '../utils/styleUtils';
 import ClickableText from './ClickableText';
 
 const Wrapper = styled.div`
-  width: ${props => props.width || '100%'};
+  width: ${props => props.width};
+  max-width: ${props => props.maxWidth};
   height: ${cardSize.height};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
@@ -39,33 +39,38 @@ const SubTitle = styled.div`
   font-weight: 300;
 `;
 
-const Card = (props) => {
-  const navTo = () => {
-    props.history.push(`/${props.title}`);
-  };
-
-  return (
-    <Wrapper width={props.width} onClick={navTo}>
-      <Img src={props.cover} />
-      <Content>
-        <Title>
-          <ClickableText text={props.title} handleClick={navTo} textColor={themeColors.link} />
-        </Title>
-        <SubTitle>{props.subTitle}</SubTitle>
-      </Content>
-    </Wrapper>
-  );
-};
+const Card = props => (
+  <Wrapper
+    onClick={() => props.handleClick(props.title)}
+    width={props.width}
+    maxWidth={props.maxWidth}
+  >
+    <Img src={props.cover} />
+    <Content>
+      <Title>
+        <ClickableText
+          text={props.title}
+          handleClick={() => props.handleClick(props.title)}
+          textColor={themeColors.link}
+        />
+      </Title>
+      <SubTitle>{props.subTitle}</SubTitle>
+    </Content>
+  </Wrapper>
+);
 
 Card.propTypes = {
   cover: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
   width: PropTypes.string,
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired
-  }).isRequired
+  maxWidth: PropTypes.string,
+  handleClick: PropTypes.func
+};
+Card.defaultProps = {
+  width: '100%',
+  maxWidth: '100%',
+  handleClick: () => {}
 };
 
-export const card = Card;
-export default withRouter(Card);
+export default Card;

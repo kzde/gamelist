@@ -16,7 +16,7 @@ const ContentWrapper = styled.div`
   position:absolute;
   top: ${headerHeight};
   left:0;
-  right:0
+  right:0;
   bottom:0;
 `;
 class GamesCatalogScreen extends Component {

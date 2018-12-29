@@ -6,7 +6,7 @@ Array [
     text="translation fake PS4"
   />,
   <div
-    className="GamesCatalogScreen__ContentWrapper-sc-1jbtgg3-0 gHiCg"
+    className="GamesCatalogScreen__ContentWrapper-sc-1jbtgg3-0 hBPXKp"
   >
     <PlatformChoices
       choices={
