@@ -31,7 +31,7 @@ const Content = styled.span`
 `;
 
 const Link = props => (
-  <Wrapper onClick={() => props.handleClick()}>
+  <Wrapper onClick={props.handleClick}>
     <Content data-hover={props.text} textColor={props.textColor}>
       {props.text}
     </Content>

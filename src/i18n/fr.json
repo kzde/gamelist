@@ -1,4 +1,6 @@
 {
   "catalog.header.title": "Catalogue de jeux",
-  "detail.header.title": "Détails du jeux"
+  "detail.header.title": "Détails du jeux",
+  "notfoundpage.text.goback": "Retour A l'accueil",
+  "notfoundpage.text.pagenotfound": "Tout va bien, mais cette page n'existe pas!"
 }

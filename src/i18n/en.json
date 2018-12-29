@@ -1,4 +1,6 @@
 {
   "catalog.header.title": "Games catalog",
-  "detail.header.title": "Game details"
+  "detail.header.title": "Game details",
+  "notfoundpage.text.goback": "Back to home",
+  "notfoundpage.text.pagenotfound": "Every thing is fine, but this page does not exist!"
 }

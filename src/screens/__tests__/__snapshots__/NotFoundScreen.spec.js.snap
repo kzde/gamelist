@@ -6,11 +6,39 @@ Array [
     text="translation fake 404"
   />,
   <img
-    className="NotFoundScreen__Img-sc-1oziblc-0 cWrCpE"
-    src="test-file-stub"
+    className="NotFoundScreen__Img-sc-1oziblc-0 kJYjcO"
   />,
-  <MessageBox
-    content="Every thing is fine, it's just a new adventure!"
-  />,
+  <div
+    className="NotFoundScreen__ContentWrapper-sc-1oziblc-1 dhAQha"
+  >
+    <div
+      className="NotFoundScreen__Content-sc-1oziblc-2 itfODn"
+    >
+      translation fake
+    </div>
+    <div
+      className="NotFoundScreen__GoBackButton-sc-1oziblc-3 cJwFkl"
+    >
+      <NavLink
+        activeStyle={
+          Object {
+            "color": "#FE6050",
+          }
+        }
+        to="/"
+      >
+        <div
+          className="Link__Wrapper-sc-1kz7l5q-0 jgxdgC"
+        >
+          <span
+            className="Link__Content-sc-1kz7l5q-1 gOEnav"
+            data-hover="translation fake"
+          >
+            translation fake
+          </span>
+        </div>
+      </NavLink>
+    </div>
+  </div>,
 ]
 `;
