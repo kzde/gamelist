@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import Header from '../components/Header';
 import backgroundImg from '../assets/images/rayman-legends.jpg';
 import withI18N from '../contexts/withI18n';
-import Link from '../components/Link';
+import ClickableText from '../components/ClickableText';
 import { colorPalettes, textSizes, media } from '../utils/styleUtils';
 
 const Img = styled.img`
@@ -56,7 +56,7 @@ const NotFoundScreen = props => (
             color: colorPalettes.red
           }}
         >
-          <Link text={props.i18n._('notfoundpage.text.goback')} />
+          <ClickableText text={props.i18n._('notfoundpage.text.goback')} />
         </NavLink>
       </GoBackButton>
     </ContentWrapper>

@@ -28,10 +28,10 @@ Array [
         to="/"
       >
         <div
-          className="Link__Wrapper-sc-1kz7l5q-0 jgxdgC"
+          className="ClickableText__Wrapper-sc-1hvvc01-0 gReZzT"
         >
           <span
-            className="Link__Content-sc-1kz7l5q-1 gOEnav"
+            className="ClickableText__Content-sc-1hvvc01-1 khlrPb"
             data-hover="translation fake"
           >
             translation fake

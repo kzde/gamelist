@@ -16,11 +16,11 @@ exports[`Card should renders correctly 1`] = `
       className="Card__Title-sc-1gjobka-3 hkmeWs"
     >
       <div
-        className="Link__Wrapper-sc-1kz7l5q-0 jgxdgC"
+        className="ClickableText__Wrapper-sc-1hvvc01-0 gReZzT"
         onClick={[Function]}
       >
         <span
-          className="Link__Content-sc-1kz7l5q-1 gboxtL"
+          className="ClickableText__Content-sc-1hvvc01-1 byycYo"
           data-hover="card title"
         >
           card title

@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import {
   margins, cardSize, colorPalettes, textSizes, themeColors
 } from '../utils/styleUtils';
-import Link from './Link';
+import ClickableText from './ClickableText';
 
 const Wrapper = styled.div`
   width: ${props => props.width || '100%'};
@@ -49,7 +49,7 @@ const Card = (props) => {
       <Img src={props.cover} />
       <Content>
         <Title>
-          <Link text={props.title} handleClick={navTo} textColor={themeColors.link} />
+          <ClickableText text={props.title} handleClick={navTo} textColor={themeColors.link} />
         </Title>
         <SubTitle>{props.subTitle}</SubTitle>
       </Content>

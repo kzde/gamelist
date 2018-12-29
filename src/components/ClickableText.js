@@ -30,7 +30,7 @@ const Content = styled.span`
   }
 `;
 
-const Link = props => (
+const ClickableText = props => (
   <Wrapper onClick={props.handleClick}>
     <Content data-hover={props.text} textColor={props.textColor}>
       {props.text}
@@ -38,13 +38,13 @@ const Link = props => (
   </Wrapper>
 );
 
-Link.propTypes = {
+ClickableText.propTypes = {
   handleClick: PropTypes.func,
   text: PropTypes.string.isRequired,
   textColor: PropTypes.string
 };
-Link.defaultPropTypes = {
+ClickableText.defaultPropTypes = {
   handleClick: () => {},
   textColor: 'black'
 };
-export default Link;
+export default ClickableText;

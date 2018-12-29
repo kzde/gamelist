@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Link from '../../src/components/Link';
+import ClickableText from '../../src/components/ClickableText';
 
-storiesOf('Link', module)
+storiesOf('ClickableText', module)
   .add('with text', () => (
-    <Link text="Default link style with text"/>
+    <ClickableText text="Default style with text"/>
   ))
   .add('with text color props', () => (
-    <Link 
+    <ClickableText 
       text="You can change the text color"
       textColor="mediumseagreen"
     />
