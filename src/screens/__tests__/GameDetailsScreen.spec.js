@@ -6,7 +6,7 @@ import * as selectors from '../../utils/selectors';
 jest.mock('../../components/Header', () => 'Header');
 jest.mock('../../components/Paper', () => 'Paper');
 jest.mock('../../components/DetailContent', () => 'DetailContent');
-jest.mock('../../screens/NotFoundScreen', () => 'NotFoundScreen');
+jest.mock('../../screens/NotFoundScreen', () => () => 'NotFoundScreen');
 
 describe('GameDetailsScreen', () => {
   it('should renders correctly', () => {

@@ -1,13 +1,15 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import { getGameDetailsByName } from '../utils/selectors';
 import Paper from '../components/Paper';
 import DetailContent from '../components/DetailContent';
-import NotFoundScreen from './NotFoundScreen';
+import Loader from '../components/Loader';
 import withI18n from '../contexts/withI18n';
-import { media, headerHeight } from '../utils/styleUtils';
+import { media, headerHeight, colorPalettes } from '../utils/styleUtils';
+
+const NotFoundScreen = lazy(() => import('./NotFoundScreen'));
 
 const Media = styled.div``;
 const Img = styled.img`
@@ -64,7 +66,13 @@ const GameDetailsScreen = (props) => {
           </ContentWrapper>
         </Fragment>
       ) : (
-        <NotFoundScreen />
+        <Suspense
+          fallback={
+            <Loader backgroundColor={colorPalettes.black} size="60px" color={colorPalettes.white} />
+          }
+        >
+          <NotFoundScreen />
+        </Suspense>
       )}
     </Fragment>
   );

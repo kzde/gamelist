@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GameDetailsScreen should renders NotFoundScreen if gameDetails is undefined 1`] = `<NotFoundScreen />`;
+exports[`GameDetailsScreen should renders NotFoundScreen if gameDetails is undefined 1`] = `
+<div
+  className="Loader__Overlay-sc-1kdbz4n-0 hOmvfT"
+>
+  <div
+    className="Loader__BounceCircle-sc-1kdbz4n-1 lgORSW"
+    size="60px"
+  >
+    <div
+      className="Loader__Shared-sc-1kdbz4n-2 Loader__FirstCircle-sc-1kdbz4n-3 chIoxb"
+      color="#FFFFFF"
+    />
+    <div
+      className="Loader__Shared-sc-1kdbz4n-2 Loader__SecondCircle-sc-1kdbz4n-4 eUkFZO"
+      color="#FFFFFF"
+    />
+  </div>
+</div>
+`;
 
 exports[`GameDetailsScreen should renders correctly 1`] = `
 Array [
