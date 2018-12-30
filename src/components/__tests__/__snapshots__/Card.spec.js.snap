@@ -3,6 +3,7 @@
 exports[`Card should renders correctly 1`] = `
 <div
   className="Card__Wrapper-sc-1gjobka-0 dpZVZR"
+  data-test="card"
   onClick={[Function]}
   width="100%"
 >
@@ -15,6 +16,7 @@ exports[`Card should renders correctly 1`] = `
   >
     <div
       className="Card__Title-sc-1gjobka-3 hkmeWs"
+      data-test="card-title"
     >
       <div
         className="ClickableText__Wrapper-sc-1hvvc01-0 gReZzT"
@@ -30,6 +32,7 @@ exports[`Card should renders correctly 1`] = `
     </div>
     <div
       className="Card__SubTitle-sc-1gjobka-4 dnoUZn"
+      data-test="card-subtitle"
     >
       sub title
     </div>

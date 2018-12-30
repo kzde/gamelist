@@ -40,7 +40,7 @@ const Label = styled.span`
 const PlatformChoices = props => (
   <Wrapper>
     {props.choices.map((choice, index) => (
-      <LabelWrapper
+      <LabelWrapper data-test={`platform-${choice}`}
         onClick={() => props.handleClick(choice)}
         selected={props.selectedPlatform === choice}
         key={index}

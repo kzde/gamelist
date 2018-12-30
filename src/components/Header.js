@@ -86,7 +86,7 @@ class Header extends Component {
   render() {
     return (
       <Wrapper>
-        <Logo onClick={this.navToHome}>
+        <Logo data-test="header-logo" onClick={this.navToHome}>
           <svg
             width="32"
             height="32"
@@ -100,15 +100,15 @@ class Header extends Component {
             />
           </svg>
         </Logo>
-        <Title>{this.props.text}</Title>
+        <Title data-test='header-title'>{this.props.text}</Title>
         <Translate>
-          <Lang
+          <Lang data-test="language-en"
             selected={this.state.selectedLanguage === 'en'}
             onClick={() => this.handleChangeLanguage('en')}
           >
             En
           </Lang>
-          <Lang
+          <Lang data-test="language-fr"
             selected={this.state.selectedLanguage === 'fr'}
             onClick={() => this.handleChangeLanguage('fr')}
           >

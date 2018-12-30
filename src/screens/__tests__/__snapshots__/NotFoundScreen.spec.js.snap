@@ -13,11 +13,13 @@ Array [
   >
     <div
       className="NotFoundScreen__Content-sc-1oziblc-2 itfODn"
+      data-test="not-found-message"
     >
       translation fake
     </div>
     <div
       className="NotFoundScreen__GoBackButton-sc-1oziblc-3 cJwFkl"
+      data-test="go-back-button"
     >
       <NavLink
         activeStyle={

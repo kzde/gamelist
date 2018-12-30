@@ -40,21 +40,21 @@ const SubTitle = styled.div`
 `;
 
 const Card = props => (
-  <Wrapper
+  <Wrapper data-test="card"
     onClick={() => props.handleClick(props.title)}
     width={props.width}
     maxWidth={props.maxWidth}
   >
     <Img src={props.cover} />
     <Content>
-      <Title>
+      <Title data-test="card-title">
         <ClickableText
           text={props.title}
           handleClick={() => props.handleClick(props.title)}
           textColor={themeColors.link}
         />
       </Title>
-      <SubTitle>{props.subTitle}</SubTitle>
+      <SubTitle data-test="card-subtitle">{props.subTitle}</SubTitle>
     </Content>
   </Wrapper>
 );

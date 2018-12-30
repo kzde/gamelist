@@ -9,10 +9,13 @@ exports[`DetailContent should renders correctly 1`] = `
   >
     <span
       className="DetailContent__Title-z4i9bw-2 isfRBj"
+      data-test="detail-article-title"
     >
       Title
     </span>
-    <span>
+    <span
+      data-test="detail-article-subtitle"
+    >
       Subtitle is an option
     </span>
   </header>

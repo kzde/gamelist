@@ -33,7 +33,9 @@
     "file-loader": "^3.0.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
+    "jest-puppeteer": "^3.7.0",
     "prettier-eslint": "^8.8.2",
+    "puppeteer": "^1.11.0",
     "react-test-renderer": "^16.7.0",
     "url-loader": "^1.1.2",
     "webpack": "^4.28.2",
@@ -51,6 +53,7 @@
     "transform": {
       "^.+\\.js$": "babel-jest"
     },
+    "preset": "jest-puppeteer",
     "moduleNameMapper": {
       "\\.(png|svg|jpg|gif)$": "<rootDir>/__mocks__/fileMock.js"
     },

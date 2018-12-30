@@ -6,6 +6,7 @@ exports[`Header should renders correctly 1`] = `
 >
   <div
     className="Header__Logo-sc-14t63oa-2 bOSpyc"
+    data-test="header-logo"
     onClick={[Function]}
   >
     <svg
@@ -23,6 +24,7 @@ exports[`Header should renders correctly 1`] = `
   </div>
   <div
     className="Header__Title-sc-14t63oa-1 drMpun"
+    data-test="header-title"
   >
     Header text
   </div>
@@ -31,6 +33,7 @@ exports[`Header should renders correctly 1`] = `
   >
     <span
       className="Header__Lang-sc-14t63oa-4 jZfgyq"
+      data-test="language-en"
       onClick={[Function]}
       selected={true}
     >
@@ -38,6 +41,7 @@ exports[`Header should renders correctly 1`] = `
     </span>
     <span
       className="Header__Lang-sc-14t63oa-4 eUUzzD"
+      data-test="language-fr"
       onClick={[Function]}
       selected={false}
     >

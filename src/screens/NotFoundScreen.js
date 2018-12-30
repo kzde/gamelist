@@ -47,8 +47,8 @@ const NotFoundScreen = props => (
     <Header text={props.i18n._('catalog.header.title')} />
     <Img />
     <ContentWrapper>
-      <Content>{props.i18n._('notfoundpage.text.pagenotfound')}</Content>
-      <GoBackButton>
+      <Content data-test="not-found-message">{props.i18n._('notfoundpage.text.pagenotfound')}</Content>
+      <GoBackButton data-test="go-back-button">
         <NavLink
           to="/"
           activeStyle={{

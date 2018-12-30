@@ -31,8 +31,8 @@ const Content = styled.div`
 const DetailContent = props => (
   <Article>
     <Header>
-      <Title>{props.title}</Title>
-      <span>{props.subTitle}</span>
+      <Title data-test="detail-article-title">{props.title}</Title>
+      <span data-test="detail-article-subtitle">{props.subTitle}</span>
     </Header>
     <Content>{props.content}</Content>
   </Article>

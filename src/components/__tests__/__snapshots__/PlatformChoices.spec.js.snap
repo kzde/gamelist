@@ -7,6 +7,7 @@ exports[`PlatformChoices should renders correctly 1`] = `
   <div
     className="PlatformChoices__LabelWrapper-sc-1bsu13e-1 XETku"
     data-hover="platform"
+    data-test="platform-platform"
     onClick={[Function]}
     selected={true}
   >
@@ -19,6 +20,7 @@ exports[`PlatformChoices should renders correctly 1`] = `
   <div
     className="PlatformChoices__LabelWrapper-sc-1bsu13e-1 brGfql"
     data-hover="another platform"
+    data-test="platform-another platform"
     onClick={[Function]}
     selected={false}
   >
