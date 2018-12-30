@@ -6,14 +6,11 @@ import PlatformChoices from '../components/PlatformChoices';
 import choices from '../datas/platforms.json';
 import CatalogContainer from '../components/CatalogContainer';
 import { getGamesByPlatform } from '../utils/selectors';
-import gamesObj from '../datas/games.json';
 import withI18n from '../contexts/withI18n';
 import { headerHeight } from '../utils/styleUtils';
 
-const { games } = gamesObj;
-
 const ContentWrapper = styled.div`
-  position:absolute;
+  position: absolute;
   top: ${headerHeight};
   left:0;
   right:0;
@@ -21,7 +18,8 @@ const ContentWrapper = styled.div`
 `;
 class GamesCatalogScreen extends Component {
   static propTypes = {
-    i18n: PropTypes.object.isRequired
+    i18n: PropTypes.object.isRequired,
+    data: PropTypes.arrayOf(PropTypes.object).isRequired
   };
 
   constructor(props) {
@@ -29,7 +27,7 @@ class GamesCatalogScreen extends Component {
     const defaultPlatform = choices.platforms[0];
     this.state = {
       selectedPlatform: defaultPlatform,
-      games: getGamesByPlatform(games, defaultPlatform)
+      games: getGamesByPlatform(this.props.data, defaultPlatform)
     };
     this.platformSelected = this.platformSelected.bind(this);
   }
@@ -37,7 +35,7 @@ class GamesCatalogScreen extends Component {
   platformSelected(selectedPlatform) {
     this.setState({
       selectedPlatform,
-      games: getGamesByPlatform(games, selectedPlatform)
+      games: getGamesByPlatform(this.props.data, selectedPlatform)
     });
   }
 

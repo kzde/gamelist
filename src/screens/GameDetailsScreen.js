@@ -1,17 +1,13 @@
 import React, { Fragment } from 'react';
-import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import { getGameDetailsByName } from '../utils/selectors';
-import gamesObj from '../datas/games.json';
 import Paper from '../components/Paper';
 import DetailContent from '../components/DetailContent';
 import NotFoundScreen from './NotFoundScreen';
 import withI18n from '../contexts/withI18n';
 import { media, headerHeight } from '../utils/styleUtils';
-
-const { games } = gamesObj;
 
 const Media = styled.div``;
 const Img = styled.img`
@@ -31,21 +27,21 @@ const Shadow = styled.div`
   width: 100%;
   height: 368px;
   box-shadow: inset 0px -16px 16px rgba(0, 0, 0, 0.25);
-  top:0;
+  top: 0;
   left: 0;
 `;
 const DetailSection = styled.section``;
 const ContentWrapper = styled.div`
-  position:absolute;
+  position: absolute;
   top: ${headerHeight};
-  left:0;
-  right:0;
-  bottom:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 `;
 
 const GameDetailsScreen = (props) => {
   const { gameName } = props.match.params;
-  const gameDetails = getGameDetailsByName(games, gameName);
+  const gameDetails = getGameDetailsByName(props.data, gameName);
   return (
     <Fragment>
       {gameDetails ? (
@@ -80,6 +76,7 @@ GameDetailsScreen.propTypes = {
       gameName: PropTypes.string.isRequired
     })
   }).isRequired,
+  data: PropTypes.arrayOf(PropTypes.object),
   i18n: PropTypes.object.isRequired
 };
 

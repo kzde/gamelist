@@ -40,12 +40,11 @@ const Content = styled.div`
   color: ${colorPalettes.white};
   text-align: center;
 `;
-const GoBackButton = styled.div`
-`;
+const GoBackButton = styled.div``;
 
 const NotFoundScreen = props => (
   <Fragment>
-    <Header text={`${props.i18n._('catalog.header.title')} 404`} />
+    <Header text={props.i18n._('catalog.header.title')} />
     <Img />
     <ContentWrapper>
       <Content>{props.i18n._('notfoundpage.text.pagenotfound')}</Content>
@@ -63,10 +62,8 @@ const NotFoundScreen = props => (
   </Fragment>
 );
 
-NotFoundScreen.propsType = {
-  i18n: PropTypes.shape({
-    _: PropTypes
-  }).isRequired
+NotFoundScreen.propTypes = {
+  i18n: PropTypes.object.isRequired
 };
 export const notFoundScreen = NotFoundScreen;
 export default withI18N(NotFoundScreen);

@@ -3,7 +3,7 @@
 exports[`NotFoundScreen should renders correctly 1`] = `
 Array [
   <Header
-    text="translation fake 404"
+    text="translation fake"
   />,
   <img
     className="NotFoundScreen__Img-sc-1oziblc-0 kJYjcO"
