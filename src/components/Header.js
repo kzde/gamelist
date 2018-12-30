@@ -1,16 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import withI18n from '../contexts/withI18n';
 import {
-  colorPalettes, headerHeight, textSizes, margins, themeColors, media
+  colorPalettes,
+  headerHeight,
+  textSizes,
+  margins,
+  themeColors,
+  media
 } from '../utils/styleUtils';
 
 const Wrapper = styled.div`
   position: fixed;
   width: 100%;
-  z-index:1;
+  z-index: 1;
   display: flex;
   align-items: center;
   height: ${headerHeight};
@@ -52,41 +57,14 @@ const Lang = styled.span`
   }
 `;
 
-class Header extends Component {
-  static propTypes = {
-    text: PropTypes.string.isRequired,
-    history: PropTypes.shape({
-      push: PropTypes.func.isRequired
-    }).isRequired,
-    i18n: PropTypes.shape({
-      changeLanguage: PropTypes.func
-    }).isRequired
+const Header = (props) => {
+  const handleChangeLanguage = (lang) => {
+    props.i18n.changeLanguage(lang);
   };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedLanguage: 'en'
-    };
-    this.navToHome = this.navToHome.bind(this);
-    this.handleChangeLanguage = this.handleChangeLanguage.bind(this);
-  }
-
-  navToHome() {
-    this.props.history.push('/');
-  }
-
-  handleChangeLanguage(lang) {
-    this.setState({
-      selectedLanguage: lang
-    });
-    this.props.i18n.changeLanguage(lang);
-  }
-
-  render() {
-    return (
-      <Wrapper>
-        <Logo data-test="header-logo" onClick={this.navToHome}>
+  return (
+    <Wrapper>
+      <NavLink to="/">
+        <Logo data-test="header-logo" >
           <svg
             width="32"
             height="32"
@@ -100,25 +78,35 @@ class Header extends Component {
             />
           </svg>
         </Logo>
-        <Title data-test='header-title'>{this.props.text}</Title>
-        <Translate>
-          <Lang data-test="language-en"
-            selected={this.state.selectedLanguage === 'en'}
-            onClick={() => this.handleChangeLanguage('en')}
-          >
-            En
-          </Lang>
-          <Lang data-test="language-fr"
-            selected={this.state.selectedLanguage === 'fr'}
-            onClick={() => this.handleChangeLanguage('fr')}
-          >
-            Fr
-          </Lang>
-        </Translate>
-      </Wrapper>
-    );
-  }
-}
+      </NavLink>
 
+      <Title data-test="header-title">{props.text}</Title>
+      <Translate>
+        <Lang
+          data-test="language-en"
+          selected={props.i18n.currentLanguage === 'en'}
+          onClick={() => handleChangeLanguage('en')}
+        >
+          En
+        </Lang>
+        <Lang
+          data-test="language-fr"
+          selected={props.i18n.currentLanguage === 'fr'}
+          onClick={() => handleChangeLanguage('fr')}
+        >
+          Fr
+        </Lang>
+      </Translate>
+    </Wrapper>
+  );
+};
+
+Header.propTypes = {
+  text: PropTypes.string.isRequired,
+  i18n: PropTypes.shape({
+    changeLanguage: PropTypes.func,
+    currentLanguage: PropTypes.string
+  }).isRequired
+};
 export const header = Header;
-export default withRouter(withI18n(Header));
+export default withI18n(Header);
