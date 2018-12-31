@@ -16,8 +16,7 @@ You can start the projet with yarn or npm
  // Unit Test
   yarn test or npm run test
 
- // End to End Test
- Warning: application must be started
+ // End to End Test  /!\ Application must be started
  yarn test-e2e
 ```
 
