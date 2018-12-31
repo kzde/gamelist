@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { textSizes, margins, media } from '../utils/styleUtils';
+import { textSizes, margins, media } from '../utils/style';
 
 const Article = styled.article`
   font-size: ${textSizes.normalText};
@@ -28,13 +28,13 @@ const Content = styled.div`
   text-align: left;
   line-height: 25px;
 `;
-const DetailContent = props => (
+const DetailContent = ({ title, subTitle, content }) => (
   <Article>
     <Header>
-      <Title data-test="detail-article-title">{props.title}</Title>
-      <span data-test="detail-article-subtitle">{props.subTitle}</span>
+      <Title data-test="detail-article-title">{title}</Title>
+      <span data-test="detail-article-subtitle">{subTitle}</span>
     </Header>
-    <Content>{props.content}</Content>
+    <Content>{content}</Content>
   </Article>
 );
 

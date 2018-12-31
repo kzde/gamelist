@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
   colorPalettes, themeColors, media, margins
-} from '../utils/styleUtils';
+} from '../utils/style';
 
 const Wrapper = styled.div`
   background: ${colorPalettes.white};

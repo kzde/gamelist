@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import {
   themeColors, margins, colorPalettes, textSizes
-} from '../utils/styleUtils';
+} from '../utils/style';
 
 const Wrapper = styled.div`
   padding: ${margins.medium};

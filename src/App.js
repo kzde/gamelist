@@ -4,9 +4,9 @@ import React, {
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
-import { colorPalettes } from './utils/styleUtils';
+import { colorPalettes } from './utils/style';
 import Loader from './components/Loader';
-import gamesObj from './datas/games.json';
+import gamesObj from './data/games.json';
 
 const CatalogScreen = lazy(() => import('./screens/GamesCatalogScreen'));
 const DetailsScreen = lazy(() => import('./screens/GameDetailsScreen'));

@@ -7,7 +7,7 @@ import Paper from '../components/Paper';
 import DetailContent from '../components/DetailContent';
 import Loader from '../components/Loader';
 import withI18n from '../contexts/withI18n';
-import { media, headerHeight, colorPalettes } from '../utils/styleUtils';
+import { media, headerHeight, colorPalettes } from '../utils/style';
 
 const NotFoundScreen = lazy(() => import('./NotFoundScreen'));
 

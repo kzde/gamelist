@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import backgroundImg from '../assets/images/rayman-legends.jpg';
 import withI18N from '../contexts/withI18n';
 import ClickableText from '../components/ClickableText';
-import { colorPalettes, textSizes, media } from '../utils/styleUtils';
+import { colorPalettes, textSizes, media } from '../utils/style';
 
 const Img = styled.img`
   width: 100%;
@@ -42,12 +42,12 @@ const Content = styled.div`
 `;
 const GoBackButton = styled.div``;
 
-const NotFoundScreen = props => (
+const NotFoundScreen = ({ i18n }) => (
   <Fragment>
-    <Header text={props.i18n._('catalog.header.title')} />
+    <Header text={i18n._('catalog.header.title')} />
     <Img />
     <ContentWrapper>
-      <Content data-test="not-found-message">{props.i18n._('notfoundpage.text.pagenotfound')}</Content>
+      <Content data-test="not-found-message">{i18n._('notfoundpage.text.pagenotfound')}</Content>
       <GoBackButton data-test="go-back-button">
         <NavLink
           to="/"
@@ -55,7 +55,7 @@ const NotFoundScreen = props => (
             color: colorPalettes.red
           }}
         >
-          <ClickableText text={props.i18n._('notfoundpage.text.goback')} />
+          <ClickableText text={i18n._('notfoundpage.text.goback')} />
         </NavLink>
       </GoBackButton>
     </ContentWrapper>

@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import Card from './Card';
 import {
   colorPalettes, margins, cardSize, media
-} from '../utils/styleUtils';
+} from '../utils/style';
 
 const Wrapper = styled.div`
   display: grid;

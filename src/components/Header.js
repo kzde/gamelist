@@ -10,7 +10,7 @@ import {
   margins,
   themeColors,
   media
-} from '../utils/styleUtils';
+} from '../utils/style';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -57,14 +57,14 @@ const Lang = styled.span`
   }
 `;
 
-const Header = (props) => {
+const Header = ({ i18n, text }) => {
   const handleChangeLanguage = (lang) => {
-    props.i18n.changeLanguage(lang);
+    i18n.changeLanguage(lang);
   };
   return (
     <Wrapper>
       <NavLink to="/">
-        <Logo data-test="header-logo" >
+        <Logo data-test="header-logo">
           <svg
             width="32"
             height="32"
@@ -80,18 +80,18 @@ const Header = (props) => {
         </Logo>
       </NavLink>
 
-      <Title data-test="header-title">{props.text}</Title>
+      <Title data-test="header-title">{text}</Title>
       <Translate>
         <Lang
           data-test="language-en"
-          selected={props.i18n.currentLanguage === 'en'}
+          selected={i18n.currentLanguage === 'en'}
           onClick={() => handleChangeLanguage('en')}
         >
           En
         </Lang>
         <Lang
           data-test="language-fr"
-          selected={props.i18n.currentLanguage === 'fr'}
+          selected={i18n.currentLanguage === 'fr'}
           onClick={() => handleChangeLanguage('fr')}
         >
           Fr

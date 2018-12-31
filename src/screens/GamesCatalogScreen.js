@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import PlatformChoices from '../components/PlatformChoices';
-import choices from '../datas/platforms.json';
+import choices from '../data/platforms.json';
 import CatalogContainer from '../components/CatalogContainer';
 import { getGamesByPlatform } from '../utils/selectors';
 import withI18n from '../contexts/withI18n';
-import { headerHeight } from '../utils/styleUtils';
+import { headerHeight } from '../utils/style';
 
 const ContentWrapper = styled.div`
   position: absolute;

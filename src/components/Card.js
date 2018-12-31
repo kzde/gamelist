@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {
   margins, cardSize, colorPalettes, textSizes, themeColors
-} from '../utils/styleUtils';
+} from '../utils/style';
 import ClickableText from './ClickableText';
 
 const Wrapper = styled.div`

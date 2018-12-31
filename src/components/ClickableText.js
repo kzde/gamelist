@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { themeColors } from '../utils/styleUtils';
+import { themeColors } from '../utils/style';
 
 const Wrapper = styled.div`
   display: inline-block;

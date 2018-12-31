@@ -8,6 +8,7 @@
     "start": "node server.js",
     "build": "webpack --mode production",
     "test": "jest --watch",
+    "test-e2e": "jest --testPathPattern=e2espec\\.js",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
