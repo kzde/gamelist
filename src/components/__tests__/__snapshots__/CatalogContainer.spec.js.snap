@@ -2,19 +2,17 @@
 
 exports[`CatalogContainer should renders correctly 1`] = `
 <div
-  className="CatalogContainer__Wrapper-sc-1ewu4fh-0 fQWRuA"
+  className="CatalogContainer__Wrapper-sc-1ewu4fh-0 doDfKm"
 >
   <Card
     cover="cover"
     handleClick={[Function]}
-    maxWidth="359px"
     subTitle="platform"
     title="game"
   />
   <Card
     cover="another cover"
     handleClick={[Function]}
-    maxWidth="359px"
     subTitle="another platform"
     title="another game"
   />

@@ -9,8 +9,8 @@ export default class I18nProvider extends Component {
     children: PropTypes.element.isRequired
   };
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       currentLanguage: 'en',
       translationFile: en

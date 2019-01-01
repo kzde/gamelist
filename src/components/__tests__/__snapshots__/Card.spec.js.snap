@@ -2,7 +2,7 @@
 
 exports[`Card should renders correctly 1`] = `
 <div
-  className="Card__Wrapper-sc-1gjobka-0 dpZVZR"
+  className="Card__Wrapper-sc-1gjobka-0 cyrRzz"
   data-test="card"
   onClick={[Function]}
   width="100%"

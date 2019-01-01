@@ -16,7 +16,7 @@ afterAll(async () => {
 });
 
 describe('End to end test', () => {
-  it('should change the langue', async () => {
+  it('should change the language', async () => {
     await page.goto(appUrl);
     await page.waitForSelector('[data-test="header-title"]');
     let headerTitle = await page.$eval('[data-test="header-title"]', e => e.innerHTML);

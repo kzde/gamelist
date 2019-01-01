@@ -46,7 +46,7 @@ const GameDetailsScreen = (props) => {
   const gameDetails = getGameDetailsByName(props.data, gameName);
   return (
     <Fragment>
-      {gameDetails ? (
+      {gameDetails && props.match.isExact ? (
         <Fragment>
           <Header text={props.i18n._('detail.header.title')} />
           <ContentWrapper>
@@ -80,6 +80,7 @@ const GameDetailsScreen = (props) => {
 
 GameDetailsScreen.propTypes = {
   match: PropTypes.shape({
+    isExact: PropTypes.bool,
     params: PropTypes.shape({
       gameName: PropTypes.string.isRequired
     })

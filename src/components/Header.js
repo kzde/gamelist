@@ -31,6 +31,9 @@ const Title = styled.div`
   font-style: normal;
   font-weight: bold;
   font-size: ${textSizes.titleText};
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
 `;
 
 const Logo = styled.div`

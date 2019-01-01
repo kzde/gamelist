@@ -20,6 +20,8 @@ exports[`GameDetailsScreen should renders NotFoundScreen if gameDetails is undef
 </div>
 `;
 
+exports[`GameDetailsScreen should renders NotFoundScreen if path not exact matched 1`] = `"NotFoundScreen"`;
+
 exports[`GameDetailsScreen should renders correctly 1`] = `
 Array [
   <Header />,

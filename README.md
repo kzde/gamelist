@@ -1,5 +1,9 @@
 # Games Catalog
 
+# Demo
+
+A demo is available here: https://games-catalog.herokuapp.com/
+
 # Get started
 
 ## With Node locally
@@ -18,6 +22,9 @@ You can start the projet with yarn or npm
 
  // End to End Test  /!\ Application must be started
  yarn test-e2e
+
+ //StoryBook
+ yarn stroybook
 ```
 
 # Technical choices
@@ -50,8 +57,20 @@ With `styled components`, i don't have to worry about the class name bug, like d
 
 With `Storybook` and `styled components`, i can create a component with its data requirement, styles, and behaviour in the story file, and this component is isolate from the rest of my application.
 
+## CSS Grid Layout
+
+I use grid layout for manage the games catalog page, it makes responsive design more simple, but you have to Pay attention for the browser support.  
+
+## Express
+
+This page is hosted in heroku, so I add express and server.js file.
+
 # Improvements for the future
 
 ## Typechecking
 
-Migrate propTypes to `Flow`. Flow has better support for React, and its more strict. Also Flow allow us to have error hinting with some text editors. `Typescript` can be a good choice too, but i think with Flow, the migration will be less painful for the existed projet.
+Migrate propTypes to `Flow` or `Typescript`. They can help me to do more flexible typechecking for entire projet, find error at compile time.
+
+DataProvider Component can be more intelligent if there are more different data need to be loaded. For exemple in the componentDidMount lifecycle, a fetch data function can be added, and a props who can tell the component where to fetch, so we can reuse this component to fetch some other information. And with suspense, suspend component rendering while data is being loaded.
+
+If redux need to be added for some other features, PlatformChoices component can be conncected to store. Thanks to redux, the selected platform information will not be lost when user navigate between games gatalog page and detail page.

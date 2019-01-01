@@ -11,13 +11,16 @@ jest.mock('../../screens/NotFoundScreen', () => () => 'NotFoundScreen');
 describe('GameDetailsScreen', () => {
   it('should renders correctly', () => {
     const props = {
-      data: [{
-        hero: 'hero',
-        description: 'description',
-        name: 'name',
-        platform: 'platform'
-      }],
+      data: [
+        {
+          hero: 'hero',
+          description: 'description',
+          name: 'name',
+          platform: 'platform'
+        }
+      ],
       match: {
+        isExact: true,
         params: {
           gameName: '94%'
         }
@@ -26,14 +29,12 @@ describe('GameDetailsScreen', () => {
         _: jest.fn().mockReturnValue('translation fake')
       }
     };
-    const getGameDetailsByNameSpy = jest
-      .fn()
-      .mockReturnValue({
-        hero: 'hero',
-        description: 'description',
-        name: 'name',
-        platform: 'platform'
-      });
+    const getGameDetailsByNameSpy = jest.fn().mockReturnValue({
+      hero: 'hero',
+      description: 'description',
+      name: 'name',
+      platform: 'platform'
+    });
     selectors.getGameDetailsByName = getGameDetailsByNameSpy;
     const tree = renderer.create(<GameDetailsScreen {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
@@ -41,13 +42,42 @@ describe('GameDetailsScreen', () => {
 
   it('should renders NotFoundScreen if gameDetails is undefined', () => {
     const props = {
-      data: [{
-        hero: 'hero',
-        description: 'description',
-        name: 'name',
-        platform: 'platform'
-      }],
+      data: [
+        {
+          hero: 'hero',
+          description: 'description',
+          name: 'name',
+          platform: 'platform'
+        }
+      ],
       match: {
+        isExact: true,
+        params: {
+          gameName: '94%'
+        }
+      },
+      i18n: {
+        _: jest.fn().mockReturnValue('translation fake')
+      }
+    };
+    const getGameDetailsByNameSpy = jest.fn().mockReturnValue(undefined);
+    selectors.getGameDetailsByName = getGameDetailsByNameSpy;
+    const tree = renderer.create(<GameDetailsScreen {...props} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should renders NotFoundScreen if path not exact matched', () => {
+    const props = {
+      data: [
+        {
+          hero: 'hero',
+          description: 'description',
+          name: 'name',
+          platform: 'platform'
+        }
+      ],
+      match: {
+        isExact: false,
         params: {
           gameName: '94%'
         }

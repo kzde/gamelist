@@ -13,9 +13,14 @@ const Wrapper = styled.div`
   grid-gap: ${margins.large};
   justify-items: center;
   background: ${colorPalettes.lightGrey};
-  padding: ${margins.medium};
-  padding-top: 0;
-  ${media.phone`padding: ${margins.small};
+  padding: 0 ${margins.medium};
+  & div {
+    max-width: ${cardSize.width}
+  }
+  ${media.phone`padding: 0 ${margins.small};
+    & div {
+      max-width: ${cardSize.phoneWidth}
+    }
   `}
 `;
 
@@ -31,7 +36,6 @@ const CatalogContainer = ({ games, history }) => {
           title={game.name}
           subTitle={game.platform}
           cover={game.cover}
-          maxWidth={cardSize.phoneWidth}
           handleClick={navTo}
         />
       ))}

@@ -8,7 +8,6 @@ import ClickableText from './ClickableText';
 
 const Wrapper = styled.div`
   width: ${props => props.width};
-  max-width: ${props => props.maxWidth};
   height: ${cardSize.height};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
@@ -43,7 +42,6 @@ const Card = props => (
   <Wrapper data-test="card"
     onClick={() => props.handleClick(props.title)}
     width={props.width}
-    maxWidth={props.maxWidth}
   >
     <Img src={props.cover} />
     <Content>
@@ -64,12 +62,10 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
   width: PropTypes.string,
-  maxWidth: PropTypes.string,
   handleClick: PropTypes.func
 };
 Card.defaultProps = {
   width: '100%',
-  maxWidth: '100%',
   handleClick: () => {}
 };
 
