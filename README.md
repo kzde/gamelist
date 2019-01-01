@@ -67,10 +67,8 @@ This page is hosted in heroku, so I add express and server.js file.
 
 # Improvements for the future
 
-## Typechecking
+- Migrate propTypes to `Flow` or `Typescript`. They can help me to do more flexible typechecking for entire projet, find error at compile time.
 
-Migrate propTypes to `Flow` or `Typescript`. They can help me to do more flexible typechecking for entire projet, find error at compile time.
+- DataProvider Component can be more intelligent if there are more different data need to be loaded. For exemple in the componentDidMount lifecycle, a fetch data function can be added, and a props who can tell the component where to fetch, so we can reuse this component to fetch some other information. And with suspense, suspend component rendering while data is being loaded.
 
-DataProvider Component can be more intelligent if there are more different data need to be loaded. For exemple in the componentDidMount lifecycle, a fetch data function can be added, and a props who can tell the component where to fetch, so we can reuse this component to fetch some other information. And with suspense, suspend component rendering while data is being loaded.
-
-If redux need to be added for some other features, PlatformChoices component can be conncected to store. Thanks to redux, the selected platform information will not be lost when user navigate between games gatalog page and detail page.
+- If redux need to be added for some other features, PlatformChoices component can be conncected to store. Thanks to redux, the selected platform information will not be lost when user navigate between games gatalog page and detail page.
